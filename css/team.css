@@ -1,0 +1,68 @@
+@import "main.css";
+
+section {
+    position: relative;
+    /*background: grey;*/
+    /*aspect-ratio: 4/1;*/
+    overflow: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero {
+    background: rgb(10,10,10); /* Temporary */
+    display: flex;
+    z-index: -1;
+
+    background: url("../media/team_with_toolbox.jpg");
+    background-size: cover;
+    background-position: 0 40%;
+}
+
+.hero div {
+    width: 75%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(10,10,10,.8);
+}
+
+.hero p { /*temporary*/
+    color: white;
+    text-align: center;
+}
+
+.members {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+
+.member_wrapper {
+    width: 15%;
+    aspect-ratio: 2/1;
+    margin-bottom: 3rem;
+}
+
+.member_photo {
+    width: 100%;
+}
+
+.member_text {
+    padding: 0;
+    margin: 0;
+    color: var(--text_inverted);
+}
+
+.member_text_colored {
+    padding: 0;
+    margin: 0;
+}
+
+.member_name_colored, .member_text_colored {
+    color: var(--text)
+}
