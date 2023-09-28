@@ -20,7 +20,7 @@
 - ~~Hào: Seperate members by dept as well as position and add 2023 to site~~
 - ~~Contact Dante for access to google drive photos~~
 - ~~Fix footer size~~
-- Change search input to a dialog
+- ~~Change search input to a dialog~~
 - About Page
   - List group location
     - Kennesaw State University - Marietta Campus
@@ -30,7 +30,7 @@
 - Team Page
   - On years, mouse will scroll horizontally on hover
   - Allow users to filter by position, year, major
-  - Change members to cards and flip on hover (info on back)
+  - ~~Change members to cards and flip on hover (info on back)~~
 - Media Page
   - Place vertical photos separately
   - Browse media chat for 2023 photos
