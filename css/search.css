@@ -73,6 +73,36 @@ p {
 }
 
 #display_wrapper {
-    width: 100%;
-    height: 10rem;
+    display: none;
+    margin-top: 1rem;
+    width: 75%;
+    height: fit-content;
+    padding: 1rem;
+    background: var(--header);
+    border-radius: 1rem;
+}
+
+.search-result {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+.search-result-link {
+    width: fit-content;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.search-result-link:hover {
+    text-decoration: solid underline 2px var(--theme);
+    text-underline-offset: 4px;
+}
+
+.search-result-link {
+    color: var(--theme)
 }

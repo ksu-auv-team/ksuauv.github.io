@@ -1,7 +1,32 @@
 [
   {
     "title": "KSU AUV | Home",
-    "url": "index.html",
+    "url": "../index.html",
     "content": "2021 KSU AUV Sub 2023 Progress Learn what the KSU AUV team is doing this year! Blast From the Past Learn more about the 2022 Robosub Entry Meet the Team Learn about how the team is organized Contact We would love to chat. Reach us at: ksu.auv@gmail.com"
+  },
+
+  {
+    "title": "KSU AUV | About",
+    "url": "about.html",
+    "content": "The KSU AUV team is one among various groups and teams. Learn why we chose to be a part of this one. History Starting in 2004, Southern Polytechnic State University (SPSU) was one of the earliest schools to join Robosub’s AUV. In 2015, SPSU merged with KSU, leading to lost history, but most of SPSU's competition placements have been recovered and recorded. Current The 2023 KSU AUV team is focused on designing a stronger successor to the previous sub, benefiting from a comprehensive review for enhancements. With an expanded team, the KSU AUV now enjoys greater flexibility in distributing tasks and working more efficiently. Future KSU AUV aims for continuous improvement in all aspects, from sub-building to teamwork, promising significant progress this year. The team also plans to create more connections this year among spectators, sponsors, and other schools. About the Organization We are Kennesaw State University's AUV team, comprised of undergraduate students studying Mechanical, Electrical, Computer, Mechatronic engineering, as well as computer science, business, and marketing. Each year, we participate in Robosub, an engineering competition by Robonation, where we travel to San Diego (when possible) to compete against universities worldwide. This provides our team with invaluable real-world engineering experience, networking opportunities, and exposure to research from other participating teams. Our goal is to provide students with a creative outlet, so they can gain hands-on engineering experience, meet other like-minded individuals, and to have fun. What is Robosub Robosub is an annual competition hosted by Robonation that focuses on autonomous underwater vehicles (AUVs). Teams from universities worldwide participate in this event to advance AUV technology and promote engineering innovation. During the competition, teams design, build, and operate AUVs capable of completing underwater tasks, including navigation, object manipulation, and communication. Robosub provides a valuable platform for participants to gain real-world engineering experience, network with peers and professionals, and access cutting-edge research from other competing teams. The competition drives AUV development, pushing the boundaries of autonomous underwater exploration and technology."
+  },
+
+  {
+    "title": "KSU AUV | Media",
+    "url": "media.html",
+    "content": "See Our Progress Join us as we navigate working on AUVs together! 2023 Media"
+  },
+
+  {
+    "title": "KSU AUV | Sponsors",
+    "url": "sponsors.html",
+    "content": "Sponsors We are very thankful to all of our sponsors and hope to attract more. 2023 Sponsors The KSU AUV team is able to operate thanks to our generous sponsors. We appreciate the support that our sponsors provide which allow us to grow as a team. The KSU AUV team will continue to further develop and grow with the support we receive. Support is support. We appreciate any contribution and ensure it impacts the quality of the team and its results. If you would like to support the KSU AUV team, please contact us at ksu.auv@gmail.com.859 We would like to thank the following sponsors. uhhh who sponsors ksu auv?"
+  },
+
+  {
+    "title": "KSU AUV | Team",
+    "url": "team.html",
+    "content": "Meet the Team The KSU Team strives to continuously improve, adapt and overcome. 2023 Officers Dante G Orlando President Major: WIP Year: WIP Noah Trinite Vice President Year: Major:  Hao Zeng Treasurer Year: Major:  Dante G Orlando Secretary Year: Major:  Dante G Orlando Safety Officer Year: Major:  Electrical Experts Insert Name Electrical Year: Major:  Insert Name Electrical Year: Major:  Insert Name Electrical Year: Major:  Insert Name Electrical Year: Major:  Insert Name Electrical Year: Major:  Insert Name Electrical Year: Major:  Software Specialists Insert Name Electrical Year: Major:  Insert Name Electrical Year: Major:  Insert Name Electrical Year: Major:  Insert Name Electrical Year: Major:  Insert Name Electrical Year: Major:  Sergio Sanchez-Alvares Major: Computer Science Year: 3"
   }
 ]
+

@@ -33,4 +33,8 @@
   - ~~Change members to cards and flip on hover (info on back)~~
 - Media Page
   - Place vertical photos separately
-  - Browse media chat for 2023 photos
+  - Browse media chat for 2023 photos\
+- Search
+  - When pressing a link, open on a new tab and close the old right after
+  - When search is close, reset everything
+  - ~~Allow lower or uppercase in search~~

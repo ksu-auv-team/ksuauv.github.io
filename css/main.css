@@ -130,6 +130,10 @@ body {
     text-align: center;
 }
 
+.text_righted {
+    text-align: right;
+}
+
 .underlined {
     text-decoration: solid underline 2px var(--theme);
     text-underline-offset: 4px;
@@ -175,6 +179,10 @@ body {
 
 .copied-animation {
     animation: copied 400ms ease;
+}
+
+.colored_text {
+    color: var(--accent);
 }
 
 .colored_section {

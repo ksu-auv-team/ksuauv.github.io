@@ -1,18 +1,26 @@
 // Function to perform the search
-function performSearch(query) {
+function performSearch() {
+    const query = document.getElementById("search-input").value;
     // Clear previous search results
+
+    if(query.trim() === "") {
+        document.getElementById("display_wrapper").style.display = "none";
+        return;
+    }
+
     document.getElementById("display_wrapper").innerHTML = "";
 
     // Load the JSON file containing page data
     fetch("../docs/2023_index.json")
         .then((response) => {
-            console.log("Response status:", response.status); // Add this line for debugging
+            console.log("Response status:", response.status); // Debugging Status Codes
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             return response.json();
         })
         .then((data) => {
+            let resultCount = document.getElementsByClassName("search-result").length;
             // Loop through each page and check for the query
             data.forEach((page) => {
                 const pageUrl = page.url;
@@ -20,58 +28,76 @@ function performSearch(query) {
                 const pageContent = page.content;
 
                 if (typeof pageContent === "string") {
-                    // Check if the query exists in the page content
+                    //check page content
                     if (pageContent.toLowerCase().includes(query.toLowerCase())) {
-                        // Create a result element
-                        const resultElement = document.createElement("div");
-                        resultElement.classList.add("search-result");
+                        const unfilteredSentences = pageContent.split(/[.!?]/);
+                        const sentences = unfilteredSentences.filter(sentence => sentence.trim() !== '');
 
-                        // Create a link to the page
-                        const pageLink = document.createElement("a");
-                        pageLink.href = pageUrl;
-                        pageLink.textContent = pageTitle;
-                        pageLink.classList.add("search-result-link");
-
-                        // Create a snippet of content with the query highlighted
-                        const contentSnippet = document.createElement("p");
-                        contentSnippet.classList.add("search-result-snippet");
-                        const startIndex = pageContent.toLowerCase().indexOf(query.toLowerCase());
-                        const snippetText = pageContent.substring(
-                            Math.max(0, startIndex - 50),
-                            Math.min(pageContent.length, startIndex + query.length + 50)
-                        );
-                        contentSnippet.innerHTML = `${snippetText.substring(0, startIndex)}<strong>${snippetText.substring(startIndex, startIndex + query.length)}</strong>${snippetText.substring(startIndex + query.length)}`;
-
-                        // Append link and content snippet to the result element
-                        resultElement.appendChild(pageLink);
-                        resultElement.appendChild(contentSnippet);
-
-                        // Append the result element to the display wrapper
-                        document.getElementById("display_wrapper").appendChild(resultElement);
+                        sentences.forEach((sentence) => {
+                            if (sentence.toLowerCase().includes(query.toLowerCase())) {
+                                sentence = sentence.replace(new RegExp(query, 'gi'), `<strong class="colored_text">${query}</strong>`);
+                                resultCount++;
+                                createSearchResult(pageUrl, pageTitle, sentence);
+                            }
+                        })
                     }
-                    else {
-                        alert('not found')
+
+                    if (resultCount !== 0) {
+                        document.getElementById("display_wrapper").style.display = "initial";
                     }
                 }
             });
+
+            //none found function
+            if(resultCount === 0) {
+                const noResults = document.createElement("p");
+                noResults.classList.add("text_centered");
+                noResults.innerText = "No Results";
+                document.getElementById("display_wrapper").appendChild(noResults);
+            } else {
+                const counter = document.createElement("p");
+                counter.classList.add("text_righted");
+                counter.innerText = `Found ${resultCount} results.`;
+                document.getElementById("display_wrapper").prepend(counter);
+            }
         })
+
         .catch((error) => {
             console.error("Broken: ", error);
         });
 }
 
-// Function to handle search button click
-function handleSearchButtonClick() {
-    const query = document.getElementById("search-input").value.trim();
-    if (query !== "") {
-        performSearch(query);
-    }
+function createSearchResult(pageUrl, pageTitle, content) {
+    // Create a result element
+    const resultElement = document.createElement("div");
+    resultElement.classList.add("search-result");
+
+    // Create a link to the page
+    const pageLink = document.createElement("a");
+    pageLink.href = pageUrl;
+    pageLink.classList.add("search-result-link");
+    pageLink.textContent = pageTitle;
+
+    // Create a snippet of content with the query highlighted
+    const contentSnippet = document.createElement("p");
+    contentSnippet.classList.add("search-result-snippet");
+    contentSnippet.innerHTML = content;
+
+    // Append link and content snippet to the result element
+    resultElement.appendChild(pageLink);
+    resultElement.appendChild(contentSnippet);
+
+    // Append the result element to the display wrapper
+    document.getElementById("display_wrapper").appendChild(resultElement);
 }
 
-// Function to handle Enter key press in search input
-function handleSearchInputKeyPress(event) {
-        const query = document.getElementById("search-input").value.trim();
-        if (query !== "") {
-            performSearch(query);
-        }
-}
+document.addEventListener('click', function(event) {
+    const target = event.target;
+    if (target && target.tagName === 'A') {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Change the parent window's location to the clicked URL
+        window.parent.location.href = target.getAttribute('href');
+    }
+});
