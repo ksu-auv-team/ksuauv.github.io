@@ -35,6 +35,6 @@
   - Place vertical photos separately
   - Browse media chat for 2023 photos\
 - Search
-  - When pressing a link, open on a new tab and close the old right after
   - When search is close, reset everything
   - ~~Allow lower or uppercase in search~~
+  - Modify what a sentence is defined as ex(major: or の)

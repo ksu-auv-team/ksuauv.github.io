@@ -97,7 +97,7 @@ nav a {
     position: relative;
     font-weight: bold;
     color: var(--theme);
-    text-shadow: var(--text) 1px 1px;
+    text-shadow: var(--text) 2px 2px;
     text-decoration: none;
 }
 

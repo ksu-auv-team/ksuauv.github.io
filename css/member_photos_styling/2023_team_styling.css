@@ -1,6 +1,26 @@
 /* background-image: url("../../media/member_photos/2023 "); */
-#dante_g_orlando {
+#president {
     background-image: url("../../media/member_photos/2023/Dante_G_Orlando_Headshot.jpg");
+}
+
+#vice_president {
+    background-image: url("../../media/auv_est.png");
+}
+
+#treasurer {
+    background-image: url("../../media/auv_est.png");
+}
+
+#electrical_lead {
+    background-image: url("../../media/auv_est.png");
+}
+
+#mechanical_lead {
+    background-image: url("../../media/auv_est.png");
+}
+
+#software_lead {
+    background-image: url("../../media/auv_est.png");
 }
 
 #sergio_sa {
