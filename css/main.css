@@ -105,14 +105,27 @@ body {
 }
 
 .row {
-    width: 60%;
-    aspect-ratio: 4/1;
-    resize: none;
+    padding: 2rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    border-radius: 2rem;
-    transition: .4s;
+}
+
+.row_content {
+    width: 50%;
+}
+
+.row_figure {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.figure_caption {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: var(--background_mono);
 }
 
 .column {
@@ -142,6 +155,14 @@ body {
 
 .text_righted {
     text-align: right;
+}
+
+.text_inverted {
+    color: var(--text_inverted);
+}
+
+.text_dark {
+    color: var(--text);
 }
 
 .underlined {

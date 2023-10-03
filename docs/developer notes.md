@@ -3,12 +3,16 @@
 ## Pages
 - Home
 - About
-- Team / Members
+- Media
 - Sponsors
-- Contact
+- Team
+
+- __Other__
+  - Documentation for AUVs
+  - Research Papers
 
 ## Design References
-- https://www.iutopi.com/
+- None
 
 ## Phone Accessible
 - PC: Top Navbar
@@ -21,6 +25,8 @@
 - ~~Contact Dante for access to google drive photos~~
 - ~~Fix footer size~~
 - ~~Change search input to a dialog~~
+- Home Page
+  - Redesign
 - About Page
   - List group location
     - Kennesaw State University - Marietta Campus
@@ -38,3 +44,7 @@
   - When search is close, reset everything
   - ~~Allow lower or uppercase in search~~
   - Modify what a sentence is defined as ex(major: or の)
+- Documentation
+  - 2020 Kirby: Find out who has access to website to get gifs
+  - Have contents on side and allow click to go to headers
+  - Allow section to collapse when title is clicked
