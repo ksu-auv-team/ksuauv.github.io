@@ -12,7 +12,9 @@
   - Research Papers
 
 ## Design References
-- None
+- Home
+  - https://youtu.be/bJ3vn9QWzhI?si=D0L6Tbvuw53jkDVe
+    - 3:27
 
 ## Phone Accessible
 - PC: Top Navbar
@@ -27,6 +29,12 @@
 - ~~Change search input to a dialog~~
 - Home Page
   - Redesign
+  - Quicklinks
+    - View current sub
+    - Meet leadership
+    - View Kirby Documentation
+    - View meeting recordings on YT
+    - Read team research papers
 - About Page
   - List group location
     - Kennesaw State University - Marietta Campus

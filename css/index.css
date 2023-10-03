@@ -152,6 +152,49 @@ main {
     cursor: not-allowed;
 }
 
+.quick_links {
+    border: solid 2px white;
+    width: 60%;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+#main_quick_link {
+    grid-column: 1 / span 2;
+    width: 30%;
+    margin-left: 25%;
+
+}
+
+.quick_link_object {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--header);
+    width: 75%;
+    aspect-ratio: 3/1;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.quick_link_object > img {
+    height: 75%;
+}
+
+.quick_link_content {
+    padding: 0 1rem;
+    text-align: left;
+}
+
+.quick_link_content p {
+    color: var(--text_inverted);
+    font-size: 1rem;
+}
+
 .underwater_bubble {
     position: absolute;
     top: 0;
