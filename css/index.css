@@ -8,7 +8,6 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-
 }
 
 #discover_title {
@@ -92,7 +91,7 @@ main {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    aspect-ratio: 7/1;
+    aspect-ratio: 9/1;
 }
 
 .quick_link_object {
