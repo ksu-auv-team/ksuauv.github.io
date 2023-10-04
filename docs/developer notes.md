@@ -56,3 +56,4 @@
   - 2020 Kirby: Find out who has access to website to get gifs
   - Have contents on side and allow click to go to headers
   - Allow section to collapse when title is clicked
+  - Recreate HTML extractor in JS and add to repo. Create readme for instructions.
