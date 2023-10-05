@@ -57,3 +57,15 @@
   - Have contents on side and allow click to go to headers
   - Allow section to collapse when title is clicked
   - Recreate HTML extractor in JS and add to repo. Create readme for instructions.
+
+- Short Meeting
+  1. WOrk with juan for aesthetic/minimalism
+  2. Secondary Navbar
+  3. Footer logo remove working. use auv_est.png
+  4. Add all members?
+  5. Cinematic Video for home?
+     6. Possible ask arts dept
+  7. Development Stage Names
+     8. Piplup
+     9. Prinplup
+     10. Empoleon
