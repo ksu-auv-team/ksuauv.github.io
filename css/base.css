@@ -141,7 +141,7 @@ nav a:hover::before, nav a:hover::after {
     width: 50%;
 }
 
-nav a.active::before, nav a.active::after {
+nav a.active::before, nav a.active::after, #doc_link.go::before, #doc_link.go::after {
     width: 50%;
 }
 
