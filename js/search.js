@@ -75,6 +75,7 @@ function createSearchResult(pageUrl, pageTitle, content) {
     // Create a link to the page
     const pageLink = document.createElement("a");
     pageLink.href = pageUrl;
+    pageLink.setAttribute("target", "_top");
     pageLink.classList.add("search-result-link");
     pageLink.textContent = pageTitle;
 
@@ -90,14 +91,3 @@ function createSearchResult(pageUrl, pageTitle, content) {
     // Append the result element to the display wrapper
     document.getElementById("display_wrapper").appendChild(resultElement);
 }
-
-document.addEventListener('click', function(event) {
-    const target = event.target;
-    if (target && target.tagName === 'A') {
-        // Prevent the default link behavior
-        event.preventDefault();
-
-        // Change the parent window's location to the clicked URL
-        window.parent.location.href = target.getAttribute('href');
-    }
-});
