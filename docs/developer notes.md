@@ -60,7 +60,8 @@
 
 - Short Meeting
   1. WOrk with juan for aesthetic/minimalism
-  2. Secondary Navbar
+  2. ~~Secondary Navbar~~
+  3. Aesthetic background for pages
   3. Footer logo remove working. use auv_est.png
   4. Add all members?
   5. Cinematic Video for home?
