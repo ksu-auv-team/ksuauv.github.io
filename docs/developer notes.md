@@ -28,7 +28,7 @@
 - ~~Fix footer size~~
 - ~~Change search input to a dialog~~
 - Home Page
-  - Redesign
+  - ~~Redesign~~
   - Quicklinks
     - View current sub
     - Meet leadership

@@ -272,6 +272,40 @@ body {
     color: var(--text);
 }
 
+.discover_object {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 3rem 0;
+    text-decoration: none;
+    cursor: not-allowed;
+}
+
+.discover_object > * {
+    border-radius: 1rem;
+}
+
+.discover_object img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+}
+
+.discover_content {
+    padding: 1rem;
+    background: var(--header);
+}
+
+.discover_content > * {
+    margin: 5px 0;
+}
+
+.discover_content > p {
+    color: var(--background_mono);
+}
+
+
 .card_container {
     perspective: 25rem;
     width: 10vw;
