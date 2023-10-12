@@ -3,6 +3,22 @@
 */
 let documents = [];
 let currentOrder = [];
+
+function updateCount(condition) {
+    if(condition === 0) {
+        document.getElementById("result_count").innerText = `${currentOrder.length} Results`;
+    } else {
+        const documentList = document.getElementsByClassName("discover_object");
+        let visibleCount = 0;
+
+        for (const document of documentList) {
+            if (!document.classList.contains("discover_hidden")) {
+                visibleCount++;
+            }
+        }
+        document.getElementById("result_count").innerText = `${visibleCount} Results`;
+    }
+}
 function document_list() {
     return fetch("../docs/documentation_index.json")
         .then((response) => {
@@ -44,6 +60,7 @@ document_list().then(() => {
     const sortedDocuments = documents.sort((a,b) => b.date.getTime() - a.date.getTime());
     display_documents(sortedDocuments);
     sort_docs();
+    updateCount(0);
 });
 
 function sort_docs() {
@@ -74,10 +91,12 @@ function sort_docs() {
         default:
             alert('There was an issue.');
     }
+    updateCount();
 }
 
 function clearDocumentList() {
     document.getElementById('docs_list').innerHTML = '';
+    updateCount();
 }
 
 function display_documents(documents) {
@@ -146,4 +165,5 @@ function filterResults() {
             document_list[index].classList.add("discover_hidden");
         }
     })
+    updateCount();
 }
