@@ -2,6 +2,7 @@
         Object: title, date_published, documentation_url, photo_url, summary, tags
 */
 let documents = [];
+let currentOrder = [];
 function document_list() {
     return fetch("../docs/documentation_index.json")
         .then((response) => {
@@ -32,6 +33,7 @@ function document_list() {
 
                 documents.push(document);
             })
+            currentOrder = documents;
         })
         .catch((err) => {
             console.log(`Error: ${err}`);
@@ -39,8 +41,9 @@ function document_list() {
 }
 
 document_list().then(() => {
-    const sortedDocuments = documents.sort((a,b) => b.date - a.date);
+    const sortedDocuments = documents.sort((a,b) => b.date.getTime() - a.date.getTime());
     display_documents(sortedDocuments);
+    sort_docs();
 });
 
 function sort_docs() {
@@ -59,11 +62,13 @@ function sort_docs() {
         case 0:
             clearDocumentList();
             const sortedByNew = documents.slice().sort((a,b) => b.date.getTime() - a.date.getTime());
+            currentOrder = sortedByNew;
             display_documents(sortedByNew);
             break;
         case 1:
             clearDocumentList();
             const sortedByOld = documents.slice().sort((a,b) => a.date.getTime() - b.date.getTime());
+            currentOrder = sortedByOld;
             display_documents(sortedByOld);
             break;
         default:
@@ -82,8 +87,10 @@ function display_documents(documents) {
         newDoc.classList.add('discover_object');
 
         const doc_img = document.createElement('img');
-        doc_img.src = `../media/${entry.photo}`;
-        doc_img.alt = entry.photo_alt;
+        if(entry.photo.trim() !== "") {
+            doc_img.src = `../media/${entry.photo}`;
+            doc_img.alt = entry.photo_alt;
+        }
 
         const doc_content = document.createElement('div');
         doc_content.classList.add('discover_content');
@@ -111,5 +118,32 @@ function display_documents(documents) {
         newDoc.appendChild(doc_content);
 
         document.getElementById('docs_list').appendChild(newDoc);
+    })
+}
+
+function unFilterResults() {
+    const document_list = document.getElementsByClassName("discover_object");
+    for (const item of document_list) {
+        item.classList.remove("discover_hidden");
+    }
+}
+
+function filterResults() {
+    unFilterResults();
+    let filters = [];
+    const document_list = document.getElementsByClassName("discover_object");
+
+    const filter_checkboxes = document.querySelectorAll("input[name='filtering']");
+    for(const input of filter_checkboxes) {
+        if(input.checked) {
+            filters.push(input.value);
+        }
+
+    }
+
+    currentOrder.forEach((obj, index) => {
+        if(!filters.every(filter => obj.tags.includes(filter))) {
+            document_list[index].classList.add("discover_hidden");
+        }
     })
 }

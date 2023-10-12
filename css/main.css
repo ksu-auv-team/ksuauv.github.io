@@ -309,6 +309,10 @@ body {
     color: var(--background_mono);
 }
 
+.discover_hidden {
+    display: none;
+}
+
 
 .card_container {
     perspective: 25rem;
