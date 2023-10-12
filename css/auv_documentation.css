@@ -23,10 +23,16 @@ section h3 {
 
 .row {
     padding: 3rem;
+    gap: 1rem;
 }
 
 .hero {
     background: url("../media/2020_kirby_documentation/2020_sub_kirby.jpg") center;
+    background-size: cover;
+}
+
+#empoleon_hero {
+    background: url("../media/2023_empoleon_media/piplup_render_1_F.png") center;
     background-size: cover;
 }
 
@@ -44,6 +50,14 @@ section h3 {
     flex-direction: column;
     align-items: center;
     padding-bottom: 4rem;
+}
+
+.colored_section > .section_title:hover {
+    color: var(--text);
+}
+
+.colored_section p, .colored_section h2, .colored_section h3 {
+    color: var(--text);
 }
 
 .section_hero > img {
@@ -74,4 +88,28 @@ section h3 {
 
 .figure_row .row_figure > img {
     height: 100%;
+}
+
+.row_figure img {
+    width: 100%;
+}
+
+.image_row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image_row img {
+    width: 100%;
+    height: 100%;
+}
+
+.image_row .row_figure {
+    width: 40%;
+}
+
+.triple_figure .row_figure {
+    width: 30%;
 }
