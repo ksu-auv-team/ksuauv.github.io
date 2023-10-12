@@ -282,6 +282,10 @@ body {
     cursor: not-allowed;
 }
 
+.discover_no_image {
+    margin: 1rem 0;
+}
+
 .discover_object > * {
     border-radius: 1rem;
 }

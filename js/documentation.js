@@ -13,23 +13,19 @@ function document_list() {
         })
         .then((data) => {
             data.forEach((entry) => {
-                const date_parts = entry.date_published.split('-');
+                const date_parts = entry["date_published"].split('-');
                 const doc_date = new Date(
                     parseInt(date_parts[0]),    //Year
                     parseInt(date_parts[1]) - 1,    //Month
                     parseInt(date_parts[2]),    //Day
                 )
 
-                const month = doc_date.toLocaleString('en-US', { month: 'long' });
-
-                const shortened_date = `${doc_date.getFullYear()} ${month} ${doc_date.getDate()}`;
-
                 const document = {
                     title: entry.title,
-                    date: shortened_date,
-                    documentation_link: entry.documentation_url,
-                    photo: entry.photo_url,
-                    photo_alt: entry.photo_alt_description,
+                    date: doc_date,
+                    documentation_link: entry["documentation_url"],
+                    photo: entry["photo_url"],
+                    photo_alt: entry["photo_alt_description"],
                     summary: entry.summary,
                     tags: entry.tags
                 }
@@ -42,11 +38,42 @@ function document_list() {
         })
 }
 
-document_list().then((res) => {
+document_list().then(() => {
     const sortedDocuments = documents.sort((a,b) => b.date - a.date);
-
     display_documents(sortedDocuments);
 });
+
+function sort_docs() {
+    const sorting_radios = document.querySelectorAll('input[name="sorting"]');
+
+    let radio_value;
+
+    for(const radio of sorting_radios) {
+        if(radio.checked) {
+            radio_value = parseInt(radio.value);
+            break;
+        }
+    }
+
+    switch (radio_value) {
+        case 0:
+            clearDocumentList();
+            const sortedByNew = documents.slice().sort((a,b) => b.date.getTime() - a.date.getTime());
+            display_documents(sortedByNew);
+            break;
+        case 1:
+            clearDocumentList();
+            const sortedByOld = documents.slice().sort((a,b) => a.date.getTime() - b.date.getTime());
+            display_documents(sortedByOld);
+            break;
+        default:
+            alert('There was an issue.');
+    }
+}
+
+function clearDocumentList() {
+    document.getElementById('docs_list').innerHTML = '';
+}
 
 function display_documents(documents) {
     documents.forEach((entry) => {
@@ -65,7 +92,8 @@ function display_documents(documents) {
         doc_title.innerHTML = entry.title;
 
         const doc_date = document.createElement('p');
-        doc_date.innerHTML = entry.date;
+        const month = entry.date.toLocaleString('en-US', { month: 'long' });
+        doc_date.innerHTML = `${entry.date.getFullYear()} ${month} ${entry.date.getDate()}`;
 
         const doc_summary = document.createElement('p');
         doc_summary.innerHTML = entry.summary;
@@ -74,7 +102,12 @@ function display_documents(documents) {
         doc_content.appendChild(doc_date);
         doc_content.appendChild(doc_summary);
 
-        newDoc.appendChild(doc_img);
+        if(entry.photo.trim() !== "") {
+            newDoc.appendChild(doc_img);
+        } else {
+            newDoc.classList.add("discover_no_image");
+        }
+
         newDoc.appendChild(doc_content);
 
         document.getElementById('docs_list').appendChild(newDoc);

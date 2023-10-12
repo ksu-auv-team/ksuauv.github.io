@@ -38,34 +38,34 @@
 
       <label>
         Newest
-        <input type="radio" id="sort_newest" name="sorting" checked>
+        <input type="radio" id="sort_newest" name="sorting" value="0" onclick="sort_docs()" checked>
       </label>
 
       <label>
         Oldest
-        <input type="radio" id="sort_oldest" name="sorting">
+        <input type="radio" id="sort_oldest" name="sorting" value="1" onclick="sort_docs()">
       </label>
 
       <h2>Filter By</h2>
 
       <label for="filter_auv">
         AUV
-        <input type="checkbox" id="filter_auv" name="filtering">
+        <input type="checkbox" id="filter_auv" name="filtering" value="AUV">
       </label>
 
       <label for="filter_research">
         Research
-        <input type="checkbox" id="filter_research" name="filtering">
+        <input type="checkbox" id="filter_research" name="filtering" value="Research">
       </label>
 
       <label for="filter_individual">
         Individual Research
-        <input type="checkbox" id="filter_individual" name="filtering">
+        <input type="checkbox" id="filter_individual" name="filtering" value="individual_research">
       </label>
 
       <label for="filter_team">
         Team Research
-        <input type="checkbox" id="filter_team" name="filtering">
+        <input type="checkbox" id="filter_team" name="filtering" value="team_research">
       </label>
     </div>
 
