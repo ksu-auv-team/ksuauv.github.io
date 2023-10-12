@@ -1,0 +1,21 @@
+[
+  {
+    "title": "How Robosub Relates to Real World Applications",
+    "date_published": "2023-10-11",
+    "documentation_url": "../index.html",
+    "photo_url": "2020_kirby_documentation/2020_sub_kirby.jpg",
+    "photo_alt_description": "Example Photo",
+    "summary": "Robosub consists of schools competing to create the best autonomous underwater vehicle; but how does this apply to navy development and businesses?",
+    "tags": ["auv", "research"]
+  },
+
+  {
+    "title": "Exploring the Effects of Drag on Projectiles Underwater",
+    "date_published": "2022-12-12",
+    "documentation_url": "../index.html",
+    "photo_url": "pool_selfie.jpg",
+    "photo_alt_description":  "Example Photo",
+    "summary": "Robosub consists of schools competing to create the best autonomous underwater vehicle; but how does this apply to navy development and businesses?",
+    "tags": ["research", "team_research"]
+  }
+]
