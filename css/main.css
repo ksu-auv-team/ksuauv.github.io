@@ -5,6 +5,10 @@ body {
     background: var(--mono_back);
 }
 
+.hidden {
+    display: none;
+}
+
 .dialog {
     display: none;
 }
@@ -341,6 +345,20 @@ body {
     backface-visibility: hidden;
     border-radius: 1rem;
 }
+
+.colored_section .card_back {
+    background: var(--mono_back);
+}
+
+.colored_section .card_back h3 {
+    color: var(--theme);
+    text-decoration: solid 2px underline var(--theme);
+}
+
+.colored_section .card_back p {
+    color: var(--text_inverted);
+}
+
 .card_front {
     background-size: cover;
     background-position: center;
