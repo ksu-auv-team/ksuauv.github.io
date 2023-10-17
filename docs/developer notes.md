@@ -23,6 +23,8 @@
 
 ## Short Notes
   
+- General 
+  - Decide on a width for content on all pages
 - ~~Hào: Seperate members by dept as well as position and add 2023 to site~~
 - ~~Contact Dante for access to google drive photos~~
 - ~~Fix footer size~~
