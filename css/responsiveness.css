@@ -2,22 +2,560 @@
 
 /*Phones*/
 @media screen and (max-width: 576px) {
+    footer {
+        padding: 0;
+    }
 
+    h1 {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+    p a {
+        font-size: .8rem;
+    }
+
+    nav a {
+        font-size: .5rem;
+    }
+
+    .search_dialog {
+        width: 85vw;
+    }
+
+    .hero > div {
+        width: 90%;
+    }
+
+    .quick_links, .discover, #general_information, #robosub, #thank_you,
+    .empoleon_section {
+        width: 90%;
+    }
+
+    .quick_link_row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .quick_link_object {
+        width: 75%;
+        height: 4rem;
+    }
+
+    .upper_offset_row {
+        position: relative;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    #robosub {
+        flex-direction: column;
+    }
+
+    #robosub > * {
+        width: 100%;
+    }
+
+    #general_information > h1 {
+        margin: 0;
+    }
+
+    #general_information p {
+        width: 90%;
+    }
+
+    .content_text > p {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .info_box {
+        padding: 0 1rem;
+        width: 85%;
+    }
+
+    .info_box > h2 {
+        margin: 1rem 0 0;
+    }
+
+    .discover_object {
+        margin: .8rem 0;
+        width: 100%;
+    }
+
+    .documentation {
+        gap: .5rem;
+    }
+
+    #doc_menu {
+        flex-grow: .8;
+        margin-top: 1rem;
+        top: 5rem;
+        padding: 0;
+    }
+
+    #docs_list {
+        width: 65%;
+    }
+
+    #thank_you > * {
+        flex-grow: 1;
+    }
+
+    .members {
+        width: 100%;
+    }
+
+    .card_container {
+        width: 35vw;
+        margin-top: 1rem;
+    }
+
+    .card_back {
+        width: 30vw;
+    }
+
+    #media_main > div {
+        width: 85%;
+        gap: .5rem;
+    }
+
+    .media_container {
+        width: 48%;
+    }
+
+    .media_container::before {
+        font-size: .8rem;
+    }
+
+    #thank_you {
+        flex-direction: column;
+    }
+
+    #thank_you {
+        margin-bottom: 1rem;
+    }
+
+    #thank_you > *{
+        width: 100%;
+    }
+
+    #thank_you img {
+        width: 100%;
+    }
+
+    #sponsor_list {
+        width: 85%;
+    }
+
+    .sponsor_wrapper {
+        flex-direction: column;
+    }
+
+    .sponsor_text {
+        width: 100%;
+        max-width: none;
+    }
+
+    .sponsor_wrapper a {
+        font-size: 1rem;
+    }
+
+    .sponsor_wrapper > img {
+        width: 100%;
+    }
+
+    .section_title {
+        font-size: 1.2rem;
+    }
+
+    #kirby_main > * {
+        width: 85%;
+    }
+
+    .sub_section_text {
+        width: 100%;
+    }
+
+    .sub_section_text p, #kirby_main .row .row_content p {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #kirby_main .row {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #kirby_main .row .row_content {
+        width: 100%;
+    }
+
+    .sub_section_text > * {
+        width: 100%;
+        padding: 0;
+    }
+
+    .row_content {
+        width: 100%;
+    }
+
+    #kirby_main .figure_row {
+        flex-direction: row;
+    }
+
+    .image_row, .row {
+        flex-direction: column;
+    }
+
+    .image_row .row_figure {
+        width: 90%;
+    }
 }
 
 /*Tablets*/
 @media screen and (min-width: 577px) and (max-width: 768px) {
+    footer {
+        padding: 0;
+    }
 
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+    nav a {
+        font-size: .5rem;
+    }
+
+    .search_dialog {
+        width: 85vw;
+    }
+
+    .hero > div {
+        width: 90%;
+    }
+
+    .quick_links, .discover, #general_information, #robosub, #thank_you,
+    .empoleon_section {
+        width: 90%;
+    }
+
+    .quick_link_object {
+        width: 42%;
+    }
+
+    .upper_offset_row {
+        position: relative;
+        gap: 2rem;
+    }
+
+    #general_information > h1 {
+        margin: 0;
+    }
+
+    .info_box {
+        padding: 0 1rem;
+        width: 25%;
+    }
+
+    .info_box > h2 {
+        margin: 1rem 0 0;
+    }
+
+    .discover_object {
+        margin: .8rem 0;
+        width: 100%;
+    }
+
+    #doc_menu {
+        width: 15%;
+        margin-top: 1rem;
+        top: 5rem;
+    }
+
+    #docs_list {
+        width: 65%;
+    }
+
+    #thank_you > * {
+        flex-grow: 1;
+    }
+
+    .members {
+        width: 85%;
+    }
+
+    .card_container {
+        width: 20vw;
+    }
+
+    #media_main > div {
+        width: 85%;
+    }
+
+    .media_container {
+        width: 30%;
+    }
+
+    #sponsor_list {
+        width: 85%;
+    }
+
+    .sponsor_wrapper > img {
+        width: 50%;
+    }
+
+    #kirby_main > * {
+        width: 85%;
+    }
+
+    #kirby_main .row {
+        flex-direction: column;
+    }
+
+    #kirby_main .row .row_content {
+        width: 100%;
+    }
+
+    #kirby_main .figure_row {
+        flex-direction: row;
+    }
 }
 
 /*Tablets and Small Desktops*/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+    footer {
+        padding: 0;
+    }
 
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+    nav a {
+        font-size: .5rem;
+    }
+
+    .search_dialog {
+        width: 85vw;
+    }
+
+    .hero > div {
+        width: 90%;
+    }
+
+    .quick_links, .discover, #general_information, #robosub, #thank_you,
+    .empoleon_section {
+        width: 90%;
+    }
+
+    .quick_link_object {
+        width: 42%;
+    }
+
+    .upper_offset_row {
+        position: relative;
+        gap: 2rem;
+    }
+
+    #general_information > h1 {
+        margin: 0;
+    }
+
+    .info_box {
+        padding: 0 1rem;
+        width: 25%;
+    }
+
+    .info_box > h2 {
+        margin: 1rem 0 0;
+    }
+
+    .discover_object {
+        margin: .8rem 0;
+        width: 100%;
+    }
+
+    #doc_menu {
+        width: 15%;
+        margin-top: 1rem;
+        top: 5rem;
+    }
+
+    #docs_list {
+        width: 65%;
+    }
+
+    #thank_you > * {
+        flex-grow: 1;
+    }
+
+    .members {
+        width: 85%;
+    }
+
+    .card_container {
+        width: 17vw;
+    }
+
+    #media_main > div {
+        width: 85%;
+    }
+
+    .media_container {
+        width: 30%;
+    }
+
+    #sponsor_list {
+        width: 85%;
+    }
+
+    .sponsor_wrapper > img {
+        width: 50%;
+    }
+
+    #kirby_main > * {
+        width: 85%;
+    }
+
+    #kirby_main .row {
+        flex-direction: column;
+    }
+
+    #kirby_main .row .row_content {
+        width: 100%;
+    }
+
+    #kirby_main .figure_row {
+        flex-direction: row;
+    }
 }
 
 /*Desktops*/
 @media screen and (min-width: 993px) and (max-width: 1200px) {
+    h1 {
+        font-size: 2rem;
+    }
 
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .search_dialog {
+        width: 85vw;
+    }
+
+    .hero > div {
+        width: 90%;
+    }
+
+    .quick_links, .discover, #general_information, #robosub, #thank_you,
+    .empoleon_section {
+        width: 85%;
+    }
+
+    .upper_offset_row {
+        position: relative;
+        gap: 2rem;
+    }
+
+    #general_information > h1 {
+        margin: 0;
+    }
+
+    .info_box {
+        padding: 0 1rem;
+        width: 25%;
+    }
+
+    .info_box > h2 {
+        margin: 1rem 0 0;
+    }
+
+    .discover_object {
+        width: 100%;
+    }
+
+    #doc_menu {
+        width: 15%;
+    }
+
+    #docs_list {
+        width: 65%;
+    }
+
+    #thank_you > * {
+        flex-grow: 1;
+    }
+
+    .members {
+        width: 85%;
+    }
+
+    .card_container {
+        width: 17vw;
+    }
+
+    #media_main > div {
+        width: 85%;
+    }
+
+    .media_container {
+        width: 30%;
+    }
+
+    #sponsor_list {
+        width: 85%;
+    }
+
+    .sponsor_wrapper > img {
+        max-width: 50%;
+    }
+
+    #kirby_main > * {
+        width: 85%;
+    }
 }
 
 /*Large Desktops*/
@@ -73,7 +611,5 @@
     }
 }
 
-/*my monitor*/
-@media screen and (min-width: 1500px){
-
-}
+/*Any thing larger is the default css. This site was developed on my
+    2560px width monitor*/
