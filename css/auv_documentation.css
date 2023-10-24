@@ -1,12 +1,16 @@
 @import "main.css";
 
 main {
-    width: 50%;
-    margin-left: 24%;
+    width: 100%;
     margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
+    width: 55%;
     height: fit-content;
     padding: 1rem;
     border-radius: 1rem;

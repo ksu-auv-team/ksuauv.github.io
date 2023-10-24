@@ -1,0 +1,79 @@
+
+
+/*Phones*/
+@media screen and (max-width: 576px) {
+
+}
+
+/*Tablets*/
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+}
+
+/*Tablets and Small Desktops*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+}
+
+/*Desktops*/
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+}
+
+/*Large Desktops*/
+@media screen and (min-width: 1201px) and (max-width: 1499px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .quick_links, .discover, #general_information, #robosub, #thank_you,
+        .empoleon_section {
+        width: 75%;
+    }
+
+    .upper_offset_row {
+        position: relative;
+    }
+
+    #general_information > h1 {
+        margin: 0;
+    }
+
+    .info_box {
+        padding: 0 1rem;
+        width: 25%;
+    }
+
+    .info_box > h2 {
+        margin: 1rem 0 0;
+    }
+
+    .discover_object {
+        width: 100%;
+    }
+
+    #doc_menu {
+        width: 20%;
+    }
+
+    #thank_you > * {
+        flex-grow: 1;
+    }
+
+    .card_container {
+        width: 13vw;
+    }
+
+    #kirby_main > * {
+        width: 75%;
+    }
+}
+
+/*my monitor*/
+@media screen and (min-width: 1500px){
+
+}
