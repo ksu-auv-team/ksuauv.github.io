@@ -248,8 +248,12 @@
         font-size: .8rem;
     }
 
+    .header_home_icon {
+        height: 70%;
+    }
+
     nav a {
-        font-size: .5rem;
+        font-size: 1rem;
     }
 
     .search_dialog {
@@ -362,15 +366,19 @@
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     p {
-        font-size: .8rem;
+        font-size: 1rem;
+    }
+
+    .header_home_icon {
+        height: 70%;
     }
 
     nav a {
-        font-size: .5rem;
+        font-size: 1rem;
     }
 
     .search_dialog {
@@ -476,6 +484,10 @@
 
     h2 {
         font-size: 1.4rem;
+    }
+
+    .header_home_icon {
+        height: 70%;
     }
 
     nav a {
@@ -613,3 +625,7 @@
 
 /*Any thing larger is the default css. This site was developed on my
     2560px width monitor*/
+
+@media screen and (orientation: portrait) {
+
+}
