@@ -46,18 +46,34 @@ body {
     z-index: +2;
 }
 
+#side_nav {
+    position: fixed;
+    top: 3.9rem;
+    left: -100%;
+    width: fit-content;
+    height: calc(100vh - 4rem);
+    z-index: 1;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    transition: 600ms ease-in-out;
+}
+
 #nav.show {
     transform: translateY(3rem); /* Move the content down by 2.9rem when 'show' class is applied */
 }
 
-#menu_button {
+#menu_button, #side_menu {
     padding: 0;
     background: none;
     height: 70%;
     aspect-ratio: 1;
 }
 
-#hamburger_menu {
+#side_menu {
+    display: none;
+}
+
+.hamburger_menu {
     cursor: pointer;
     height: 100%;
     aspect-ratio: 1;
@@ -282,7 +298,7 @@ body {
     gap: 5px;
     margin: 3rem 0;
     text-decoration: none;
-    cursor: not-allowed;
+    cursor: pointer;
 }
 
 .discover_no_image {

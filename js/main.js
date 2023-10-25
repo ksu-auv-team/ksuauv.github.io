@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentPageUrl = window.parent.location.pathname;
         const currentPageEnd = currentPageUrl.split('/').pop();
         const navLinks = document.querySelectorAll("nav a");
-        const documentationPages = ["2020_sub_kirby.html"];
+        const documentationPages = ["2020_sub_kirby.html", "2023_sub_empoleon.html"];
 
         navLinks.forEach((link) => {
 
@@ -43,7 +43,13 @@ function toggleNav() {
     nav.classList.toggle('show');
 }
 
-function changeParentIframeSrc(newSrc) {
-    // Access the parent document's <iframe> element and update its src attribute.
-    window.parent.document.querySelector('iframe').src = newSrc;
+let sideNav = false;
+function toggleSideNav() {
+    if(!sideNav) {
+        document.getElementById('side_nav').style.left = '0';
+        sideNav = true;
+    } else {
+        document.getElementById('side_nav').style.left = '-100%';
+        sideNav = false;
+    }
 }
