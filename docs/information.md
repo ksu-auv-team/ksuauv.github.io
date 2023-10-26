@@ -3,21 +3,23 @@ _Site Content_
 
 ## Team
 
-Name: Choose a fitting name Dante
-
-Contact: ?
+Name: Kennesaw State University AUV Team
 
 ## Individuals
 
-_Add your own, so I can add you on the site._
-
-_If you are ready, add your photo to the ``media`` directory._
-
 ### Sergio Sanchez_Alvares (Software)
 
-Contact: sergy200118@gmail.com
+Contact: surgosan@gmail.com / (discord) Sergio SA
 
 
+## Documentation
+
+- 2020 AUV Kirby
+- 2023 AUV Empoleon
+
+## Research
+
+ - To Be Added Later
 
 
 ## Sponsors
