@@ -1,6 +1,8 @@
 # KSU Underwater Vehicle Team Website
 _For Website Development_
 
+![Home Page][1]
+
 This site is built using basic HTML, CSS, and JavaScript in order to avoid frameworks. Not everyone uses frameworks so there are none here.
 
 The website is built keeping in mind that multiple people will work on it in the future.
@@ -19,6 +21,8 @@ Therefore, the site is made to accommodate updates and changes.
 
 ## Project Structure
 
+![Project Structure][2]
+
 - __HTML__: files are located in the  ``html`` directory.
   - Exception is ``index.html`` which is the root html file.
   - HTML documentation for subs is in ``html/sub_documentation``
@@ -28,8 +32,15 @@ Therefore, the site is made to accommodate updates and changes.
     - ``<link rel="stylesheet" type="text/css" href="css/SPECIFICSTYLINGFILE.css">``
     - ``<link rel="stylesheet" type="text/css" href="css/responsiveness.css">``
     - Ensure the CSS files are in the order shown above as CSS rules take priority based on what is newest.
+    
+![CSS Order][3]
+  
   - Create another css file for specific pages if needed: *Second \<link> above*.
   - Use ``var(--color_variable_here)`` from ``base.css`` for general colors.
+
+![Color Variables][4]
+
+  - 
     - See ``base.css`` and ``main.css`` for info on which elements will automatically have a style applied.
     - ``base.css`` => General Queries (h1, p, div, span, etc...)
     - ``main.css`` => Specific classes & ids (.row, #side_nav, etc...)
@@ -37,6 +48,7 @@ Therefore, the site is made to accommodate updates and changes.
   - Every HTML file must use the ``main.js`` file for access to global functions.
     - ```<script src="js/main.js"></script>```
     - Create specific JS files for html files as needed.
+![Script Order][5]
 - __Media__: Photos, videos, sounds, icons, etc. will go in the ``media`` directory.
   - Photos for team members go in ``media/member_photos/YEAR``, 
   but to use them is in ``css/members_photo_styling``.
@@ -60,6 +72,9 @@ Therefore, the site is made to accommodate updates and changes.
         if needed and then in the line above
           - Create a new checkbox to add a new filter
         - __TAGS ARE CASE SENSITIVE__
+
+![Documentation Index][6]
+
   - Research
     - Leads to research conducted and performed by the KSU AUV team.
     - Refers to pdf, word, etc. files that would be downloaded or served instead of viewed on a html file.
@@ -75,6 +90,8 @@ Therefore, the site is made to accommodate updates and changes.
       - Note this url is dependent on where the HTML file is located at.
     - "content" => pure text from HTML files from extracted content .txt files
 
+![Kirby Content][7]
+
 ## DO NOT
 
 - Add styles to elements in ``base.css`` or ``main.css``.
@@ -84,3 +101,11 @@ Therefore, the site is made to accommodate updates and changes.
 
 - Sergio | Primary | discord: Sergio SA
 - Juan | Media | discord: TheSaltyJuan
+
+[1]: media/doc_photos/main.png
+[2]: media/doc_photos/top_level_project_structure.png
+[3]: media/doc_photos/css_order.png
+[4]: media/doc_photos/color_variables.png
+[5]: media/doc_photos/script_order.png
+[6]: media/doc_photos/doc_index.png
+[7]: media/doc_photos/kirby_content.png

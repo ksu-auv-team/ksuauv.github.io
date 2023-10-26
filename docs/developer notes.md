@@ -35,6 +35,7 @@
   - Allow users to filter by position, year, major
 - Media Page
   - Place vertical photos separately
+  - Add Videos Section
 - Search
   - Modify what a sentence is defined as ex(major: or の)
 - Documentation
