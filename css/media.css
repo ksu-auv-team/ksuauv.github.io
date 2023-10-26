@@ -44,6 +44,17 @@
     animation: fade_transition;
 }
 
+#shroud::before {
+    max-width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "Press Outside Photo Or Enter To Exit";
+}
+
 #enlarged_photo_container {
     display: none;
     position: fixed;
@@ -63,6 +74,7 @@
     max-width: 95vw;
     z-index: 2;
     opacity: 0;
+    box-shadow: var(--text) 1rem 1rem;
 }
 
 .media_container {

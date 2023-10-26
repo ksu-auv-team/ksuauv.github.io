@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("enlarged_photo").src = img.src;
             toggleEnlargedImage();
         });
+
+        image.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                const img = this.querySelector('img');
+                document.getElementById("enlarged_photo").src = img.src;
+                toggleEnlargedImage();
+            }
+        });
     });
 });
 
