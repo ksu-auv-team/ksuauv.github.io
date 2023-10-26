@@ -1,0 +1,68 @@
+/*Listed in chronological order (newest at top)
+
+    Text not appearing on the photo? Make sure ID does not start with a number.
+*/
+
+#tech_fest_pie_2023::before {
+    content: "2023 Tech Fest - Pie";
+}
+
+#general_meeting::before {
+    content: "Hanging in the club room";
+}
+
+#experimenting:before {
+    content: "Experimenting";
+}
+
+#pool_testing:before {
+    content: "Testing the sub in the pool";
+}
+
+#machine_shop:before {
+    content: "Machine Shop";
+}
+
+#inspecting_sub:before {
+    content: "Inspecting the Sub";
+}
+
+#pool_selfie:before {
+    content: "Pool Selfie";
+}
+
+#soldering_board:before {
+    content: "Soldering Board";
+}
+
+#club_room_soldering:before {
+    content: "Soldering in Lab";
+}
+
+#soldering_night:before {
+    content: "Soldering Night";
+}
+
+#teaching:before {
+    content: "Teaching";
+}
+
+#stem_fair_speaking:before {
+    content: "Stem Fair";
+}
+
+#water_pc_testing:before {
+    content: "Testing and Monitoring";
+}
+
+#large_testing:before {
+    content: "Large Scale Testing";
+}
+
+#intricate_work:before {
+    content: "Intricate Work";
+}
+
+#spsu_auv:before {
+    content: "SPSU AUV";
+}

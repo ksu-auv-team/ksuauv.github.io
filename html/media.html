@@ -9,8 +9,10 @@
     <title>KSU AUV | Media</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/media_photo_text.css">
     <link rel="stylesheet" href="../css/responsiveness.css">
     <script src="../js/main.js"></script>
+    <script src="../js/media.js"></script>
 </head>
 
 <header id="header" class="">
@@ -33,10 +35,19 @@
         </div>
     </div>
 
+        <div id="enlarged_photo_container">
+            <span id="shroud" class="dialog_shroud" onclick="toggleEnlargedImage()"></span>
+            <img id="enlarged_photo" src="../media/2023_tech_fest_pie.jpg" alt="Enlarged Photo">
+        </div>
+
     <main id="media_main">
         <h1>Photos</h1>
 
         <div>
+            <div class="media_container" id="tech_fest_pie_2023">
+                <img src="../media/2023_tech_fest_pie.jpg" alt="2023 Tech Fest Pie">
+            </div>
+
             <div class="media_container" id="general_meeting">
                 <img src="../media/club_room_people.jpg" alt="General Meeting">
             </div>
