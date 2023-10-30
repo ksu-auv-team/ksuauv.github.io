@@ -1,5 +1,8 @@
 # Developer Notes
 
+create documentation for individual files
+regarding functions and blocks of code
+
 ## Pages
 - Home
 - About
