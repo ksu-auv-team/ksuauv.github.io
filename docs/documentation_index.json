@@ -10,22 +10,22 @@
   },
 
   {
-    "title": "The Future of Underwater Robotics",
-    "date_published": "2023-08-15",
-    "documentation_url": "../index.html",
-    "photo_url": "",
-    "photo_alt_description": "Example Photo",
-    "summary": "A deep dive into the advancements and possibilities of underwater robotics.",
-    "tags": ["auv", "research"]
-  },
-
-  {
     "title": "2023 AUV 'Empoleon Concept' Documentation",
     "date_published": "2023-10-24",
     "documentation_url": "../html/sub_documentation/2023_sub_empoleon.html",
     "photo_url": "",
-    "photo_alt_description": "Example Photo",
+    "photo_alt_description": "No Photo",
     "summary": "Introducing the 2023 AUV, Empoleon, developed and built by the KSU AUV team. This documentation being updated as the project continues to grow.",
     "tags": ["auv"]
+  },
+
+  {
+    "title": "2021-2022 KSU AUV Team Constitution",
+    "date_published": "2021-01-01",
+    "documentation_url": "../docs/Autonomous_Underwater_Vehicle_Team_Constitution_21-22.pdf",
+    "photo_url": "",
+    "photo_alt_description": "No Photo",
+    "summary": "The official KSU AUV constitution used to identify and state a purpose at Kennesaw State University.",
+    "tags": ["official"]
   }
 ]
