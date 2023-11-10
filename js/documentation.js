@@ -105,6 +105,10 @@ function display_documents(documents) {
         newDoc.href = entry.documentation_link;
         newDoc.classList.add('discover_object');
 
+        if(entry.tags.includes("download")) {
+            newDoc.download = "";
+        }
+
         const doc_img = document.createElement('img');
         if(entry.photo.trim() !== "") {
             doc_img.src = `../media/${entry.photo}`;
