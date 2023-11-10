@@ -347,6 +347,7 @@ body {
     transform-style: preserve-3d;
     transition: transform 500ms ease-in 100ms;
     border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 .card_container:hover > .card, .card_container:focus > .card {

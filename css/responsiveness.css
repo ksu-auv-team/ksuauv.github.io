@@ -128,12 +128,12 @@
     }
 
     .card_container {
-        width: 35vw;
+        width: 42vw;
         margin-top: 1rem;
     }
 
-    .card_back {
-        width: 30vw;
+    .card_back h3 {
+        margin: 1rem 0 0 0;
     }
 
     #media_main > div {
@@ -331,7 +331,11 @@
     }
 
     .card_container {
-        width: 20vw;
+        width: 25vw;
+    }
+
+    .card_back h3 {
+        margin: 1rem 0 0 0;
     }
 
     #media_main > div {
@@ -464,7 +468,11 @@
     }
 
     .card_container {
-        width: 17vw;
+        width: 21vw;
+    }
+
+    .card_back h3 {
+        margin: 1rem 0 0 0;
     }
 
     #media_main > div {
@@ -570,7 +578,11 @@
     }
 
     .card_container {
-        width: 17vw;
+        width: 19vw;
+    }
+
+    .card_back h3 {
+        margin: 1rem 0 0 0;
     }
 
     #media_main > div {
@@ -639,7 +651,11 @@
     }
 
     .card_container {
-        width: 13vw;
+        width: 17vw;
+    }
+
+   .card_back h3 {
+        margin: 1rem 0 0 0;
     }
 
     #kirby_main > * {
