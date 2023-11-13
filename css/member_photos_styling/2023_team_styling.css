@@ -1,10 +1,10 @@
 /* background-image: url("../../media/member_photos/2023 "); */
 #president {
-    background-image: url("../../media/member_photos/2023/Dante_G_Orlando_Headshot.jpg");
+    background-image: url("../../media/member_photos/2023/Dante_Orlando.jpg");
 }
 
 #vice_president {
-    background-image: url("../../media/auv_est.png");
+    background-image: url("../../media/member_photos/2023/Ben_Mueller.png");
 }
 
 #treasurer {
@@ -12,19 +12,24 @@
 }
 
 #safety_officer {
-    background-image: url("../../media/auv_est.png");
+    background-image: url("../../media/member_photos/2023/Sam_Obhi.png");
 }
 
 #electrical_lead {
-    background-image: url("../../media/auv_est.png");
+    background-image: url("../../media/member_photos/2023/Glen_Lewis.png");
 }
 
 #mechanical_lead {
-    background-image: url("../../media/auv_est.png");
+    background-image: url("../../media/member_photos/2023/Bradley_Shaw.png");
 }
 
 #software_lead {
-    background-image: url("../../media/auv_est.png");
+    background-image: url("../../media/member_photos/2023/Michael_Lees.png");
+}
+
+#media_lead {
+    background-image: url("../../media/member_photos/2023/Juan_Jimenez.png");
+    background-position: 47%;
 }
 
 #sergio_sa {
