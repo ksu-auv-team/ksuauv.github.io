@@ -16,9 +16,9 @@ section {
     display: flex;
     z-index: -1;
 
-    background: url("../media/team_with_toolbox.jpg");
+    background: url("../media/member_photos/2023/KSU_AUV_Leadership_2023.jpg");
     background-size: cover;
-    background-position: 0 40%;
+    background-position: 0 60%;
 }
 
 .hero div {
