@@ -81,7 +81,7 @@ section {
 }
 
 #general_information {
-    width: 50%;
+    width: 80%;
     /*align-self: flex-end;*/
     display: flex;
     justify-content: center;
@@ -95,7 +95,7 @@ section {
 }
 
 #robosub {
-    width: 50%;
+    width: 80%;
     display: flex;
     gap: 2rem;
 }

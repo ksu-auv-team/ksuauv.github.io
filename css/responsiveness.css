@@ -607,7 +607,7 @@
 }
 
 /*Large Desktops*/
-@media screen and (min-width: 1201px) and (max-width: 1499px) {
+@media screen and (min-width: 1201px) and (max-width: 1950px) {
     h1 {
         font-size: 2.5rem;
     }
