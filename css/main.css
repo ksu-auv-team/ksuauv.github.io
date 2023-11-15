@@ -405,8 +405,13 @@ body {
 }
 
 .card_back > h3 {
+    margin: 1rem;
     color: var(--text);
     text-align: center;
+}
+
+.card_back > p {
+    margin: 0;
 }
 
 .card_colored {
