@@ -27,6 +27,7 @@ regarding functions and blocks of code
 ## Short Notes
   
 - General
+  - Create md file for reusable code blocks (such as team card object)
 - Home Page
 - About Page
   - List group location
