@@ -37,7 +37,6 @@ regarding functions and blocks of code
       Marietta, GA 30060
 - Team Page
   - Allow users to filter by position, year, major
-  - Compress card_back (remove margin on major | keep underline.)
 - Media Page
   - Place vertical photos separately
   - Add Videos Section
