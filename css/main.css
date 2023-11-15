@@ -232,6 +232,11 @@ body {
     text-underline-offset: 4px;
 }
 
+.underlined_light {
+    text-decoration: solid underline 2px var(--text_inverted);
+    text-underline-offset: 4px;
+}
+
 .dialog {
     position: fixed;
     top: 0;
