@@ -412,6 +412,7 @@ body {
 
 .card_back > p {
     margin: 0;
+    line-height: 1.2;
 }
 
 .card_colored {
