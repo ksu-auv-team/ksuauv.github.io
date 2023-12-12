@@ -3,6 +3,14 @@
     Text not appearing on the photo? Make sure ID does not start with a number.
 */
 
+#pumpkin_launch_presentation::before {
+    content: "2023 Pumpkin Launch Presentation"
+}
+
+#pumpkin_launch_stand::before {
+    content: "2023 Pumking Launch Stand"
+}
+
 #tech_fest_pie_2023::before {
     content: "2023 Tech Fest - Pie";
 }
