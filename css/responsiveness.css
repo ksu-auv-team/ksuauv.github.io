@@ -26,14 +26,6 @@
         font-size: .8rem;
     }
 
-    #menu_button {
-        display: none;
-    }
-
-    #side_menu {
-        display: initial;
-    }
-
     nav a {
         font-size: .5rem;
     }
@@ -260,14 +252,6 @@
         height: 70%;
     }
 
-    #menu_button {
-        display: none;
-    }
-
-    #side_menu {
-        display: initial;
-    }
-
     nav a {
         font-size: 1rem;
     }
@@ -395,14 +379,6 @@
 
     .header_home_icon {
         height: 70%;
-    }
-
-    #menu_button {
-        display: none;
-    }
-
-    #side_menu {
-        display: initial;
     }
 
     nav a {

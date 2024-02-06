@@ -28,7 +28,7 @@ body {
 
 #header_container {
     display: block;
-    height: 4rem;
+    height: fit-content;
 }
 
 .graphic_nav {
@@ -42,16 +42,16 @@ body {
     background-image: url("../media/team_banner.png");
     background-position: 0 50%;
     background-size: cover;
-    height: 4rem;
+    height: 6rem;
     z-index: +2;
 }
 
 #side_nav {
     position: fixed;
-    top: 3.9rem;
+    top: 6rem;
     left: -100%;
     width: fit-content;
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 6rem);
     z-index: 1;
     border: none;
     border-radius: 0 1rem 1rem 0;
@@ -61,24 +61,6 @@ body {
 #nav.show {
     transform: translateY(3rem); /* Move the content down by 2.9rem when 'show' class is applied */
 }
-
-#menu_button, #side_menu {
-    padding: 0;
-    background: none;
-    height: 70%;
-    aspect-ratio: 1;
-}
-
-#side_menu {
-    display: none;
-}
-
-.hamburger_menu {
-    cursor: pointer;
-    height: 100%;
-    aspect-ratio: 1;
-}
-
 
 .header_home_icon {
     border-radius: .5rem;

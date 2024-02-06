@@ -35,12 +35,16 @@ function closeDialog() {
 
 let toggled = false;
 function toggleNav() {
-    const iframe = window.parent.document.querySelector('iframe');
-    const nav = iframe.contentDocument.getElementById('nav');
-    const header = document.getElementById('header');
-    // Toggle the 'show' class on the nav element to translate it down or up.
-    header.classList.toggle('show');
-    nav.classList.toggle('show');
+    if(window.innerWidth>769){
+        const iframe = window.parent.document.querySelector('iframe');
+        const nav = iframe.contentDocument.getElementById('nav');
+        const header = document.getElementById('header');
+        // Toggle the 'show' class on the nav element to translate it down or up.
+        header.classList.toggle('show');
+        nav.classList.toggle('show');
+    } else {
+        toggleSideNav()
+    }
 }
 
 let sideNav = false;
