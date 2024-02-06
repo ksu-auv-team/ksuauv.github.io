@@ -74,3 +74,31 @@
 #spsu_auv:before {
     content: "SPSU AUV";
 }
+
+#january_workshop_A:before {
+    content: "January 2023  |  Mechanical Team Workshop  |  Exhibit A"
+}
+
+#january_workshop_B:before {
+    content: "January 2023  |  Mechanical Team Workshop  |  Exhibit B"
+}
+
+#january_workshop_C:before {
+    content: "January 2023  |  Mechanical Team Workshop  |  Exhibit C"
+}
+
+#january_workshop_D:before {
+    content: "January 2023  |  Mechanical Team Workshop  |  Exhibit D"
+}
+
+#january_workshop_E:before {
+    content: "January 2023  |  Mechanical Team Workshop  |  Exhibit E"
+}
+
+#january_workshop_F:before {
+    content: "January 2023  |  Mechanical Team Workshop  |  Exhibit F"
+}
+
+#january_workshop_G:before {
+    content: "January 2023  |  Mechanical Team Workshop  |  Exhibit G"
+}
