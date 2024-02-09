@@ -38,6 +38,10 @@
         font-size: .5rem;
     }
 
+    .search {
+        height: 10%;
+    }
+
     .search_dialog {
         width: 85vw;
     }
