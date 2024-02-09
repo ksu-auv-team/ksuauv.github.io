@@ -26,6 +26,14 @@
         font-size: .8rem;
     }
 
+    header { height: 4rem }
+    #header.show { height: 7rem }
+    .graphic_nav { height: 4rem }
+
+    .header_home_icon {
+        height: 60%;
+    }
+
     nav a {
         font-size: .5rem;
     }
@@ -248,9 +256,9 @@
         font-size: .8rem;
     }
 
-    .header_home_icon {
-        height: 70%;
-    }
+    header { height: 4rem }
+    #header.show { height: 7rem }
+    .graphic_nav { height: 4rem }
 
     nav a {
         font-size: 1rem;
