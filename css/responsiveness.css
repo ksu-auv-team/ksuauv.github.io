@@ -9,21 +9,25 @@
         gap: 1rem;
     }
 
+    .hero {
+        aspect-ratio: 2/1;
+    }
+
     .footer_img {
         display: none;
     }
     .footer_social { gap: 0; } .footer_text { margin: 0 }
 
     h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     p {
@@ -266,19 +270,19 @@
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
 
     p {
-        font-size: .8rem;
+        font-size: 1rem;
     }
 
     header { height: 4rem }
@@ -390,11 +394,11 @@
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     h3 {
@@ -506,11 +510,11 @@
 /*Desktops*/
 @media screen and (min-width: 993px) and (max-width: 1200px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.75rem;
     }
 
     header { height: 5rem }
@@ -608,7 +612,7 @@
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .main_wrapper, .discover, #general_information, #robosub, #thank_you,
