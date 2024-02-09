@@ -42,7 +42,7 @@ main div {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 2rem;
+    gap: 1rem;
     height: fit-content;
 }
 
@@ -52,7 +52,7 @@ main div {
     align-items: center;
     justify-content: space-between;
     background: var(--header);
-    width: 25%;
+    width: calc(25% - 1rem);
     height: fit-content;
     border-radius: 1rem;
     text-decoration: none;
