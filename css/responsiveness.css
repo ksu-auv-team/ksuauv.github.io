@@ -494,6 +494,10 @@
         font-size: 1.4rem;
     }
 
+    header { height: 5rem }
+    #header.show { height: 8rem }
+    .graphic_nav { height: 5rem }
+
     .header_home_icon {
         height: 70%;
     }
@@ -640,7 +644,7 @@
 }
 
 /*Any thing larger is the default css. This site was developed on my
-    2560px width monitor*/
+    2560px width 27" monitor*/
 
 @media screen and (orientation: portrait) {
 
