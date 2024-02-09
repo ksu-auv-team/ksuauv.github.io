@@ -3,8 +3,16 @@
 /*Phones*/
 @media screen and (max-width: 576px) {
     footer {
-        padding: 0;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 1rem;
+        gap: 1rem;
     }
+
+    .footer_img {
+        display: none;
+    }
+    .footer_social { gap: 0; } .footer_text { margin: 0 }
 
     h1 {
         font-size: 1rem;

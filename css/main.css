@@ -4,6 +4,10 @@ body {
     background: var(--mono_back);
 }
 
+.accent_text {
+    color: var(--theme);
+}
+
 .hidden {
     display: none;
 }
