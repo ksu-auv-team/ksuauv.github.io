@@ -38,8 +38,8 @@
         font-size: .5rem;
     }
 
-    .search {
-        height: 10%;
+    .search svg {
+        height: 85%;
     }
 
     .search_dialog {
@@ -50,7 +50,7 @@
         width: 90%;
     }
 
-    .quick_links, .discover, #general_information, #robosub, #thank_you,
+    .main_wrapper, .discover, #general_information, #robosub, #thank_you,
     .empoleon_section {
         width: 90%;
     }
@@ -276,7 +276,7 @@
         width: 90%;
     }
 
-    .quick_links, .discover, #general_information, #robosub, #thank_you,
+    .main_wrapper, .discover, #general_information, #robosub, #thank_you,
     .empoleon_section {
         width: 90%;
     }
@@ -405,7 +405,7 @@
         width: 90%;
     }
 
-    .quick_links, .discover, #general_information, #robosub, #thank_you,
+    .main_wrapper, .discover, #general_information, #robosub, #thank_you,
     .empoleon_section {
         width: 90%;
     }
@@ -526,7 +526,7 @@
         width: 90%;
     }
 
-    .quick_links, .discover, #general_information, #robosub, #thank_you,
+    .main_wrapper, .discover, #general_information, #robosub, #thank_you,
     .empoleon_section {
         width: 85%;
     }
@@ -608,7 +608,7 @@
         font-size: 1.5rem;
     }
 
-    .quick_links, .discover, #general_information, #robosub, #thank_you,
+    .main_wrapper, .discover, #general_information, #robosub, #thank_you,
         .empoleon_section {
         width: 75%;
     }

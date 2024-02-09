@@ -8,10 +8,6 @@
     --theme: #E2A300;
     --theme_visible: rgba(255, 198, 41, 0.85);
     --accent: #2962FF;
-    --water_light: #aac7ff;
-    --water_one: #4685ff;
-    --water_two: #002c83;
-    --water_three: #0059ff;
     --header: #2d2926;
     --text: #000000;
     --mono_back: #101112;
@@ -75,6 +71,14 @@ footer h2 {
     padding: 0;
 }
 
+hr {
+    height: 2px;
+    background-color: var(--text_inverted);
+    width: 100%;
+    border: none;
+    margin: 0;
+}
+
 h1 {
     font-size: 3rem;
 }
@@ -84,7 +88,7 @@ h2 {
 }
 
 h1, h2, button, h3, label {
-    color: var(--theme);
+    color: white;
 }
 
 p, a, ul, li {

@@ -283,7 +283,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin: 3rem 0;
     text-decoration: none;
     cursor: pointer;
 }
