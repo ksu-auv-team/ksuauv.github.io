@@ -39,6 +39,7 @@ function document_list() {
 
                 const document = {
                     title: entry.title,
+                    author: entry.author,
                     date: doc_date,
                     documentation_link: entry["documentation_url"],
                     photo: entry["photo_url"],
@@ -121,6 +122,14 @@ function display_documents(documents) {
         const doc_title = document.createElement('h2');
         doc_title.innerHTML = entry.title;
 
+        let author_exists = false;
+        const doc_author = document.createElement("p");
+        doc_author.classList.add('text_inverted');
+        if(entry.author.trim().length !== 0) {
+            author_exists = true;
+            doc_author.innerHTML = entry.author;
+        }
+
         const date_icon_container = document.createElement('div');
         date_icon_container.classList.add("content_date_icon");
 
@@ -141,6 +150,9 @@ function display_documents(documents) {
         doc_summary.innerHTML = entry.summary;
 
         doc_content.appendChild(doc_title);
+        if(author_exists) {
+            doc_content.appendChild(doc_author);
+        }
         doc_content.appendChild(date_icon_container);
         doc_content.appendChild(doc_summary);
 

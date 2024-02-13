@@ -319,6 +319,10 @@ body {
     color: var(--background_mono);
 }
 
+.discover_content > .text_inverted {
+    color: var(--text_inverted);
+}
+
 .discover_hidden {
     display: none;
 }
