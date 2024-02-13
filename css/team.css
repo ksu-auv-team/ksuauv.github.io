@@ -48,7 +48,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5%;
+    gap: 2rem;
 }
 
 .member_wrapper {
