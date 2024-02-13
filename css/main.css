@@ -341,7 +341,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.card_container:hover > .card, .card_container:focus > .card {
+.card_container:hover > .card, .card_container:focus > .card, .card_container:active > .card{
     transform: rotateY(180deg);
 }
 
