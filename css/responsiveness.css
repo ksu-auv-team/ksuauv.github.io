@@ -137,15 +137,31 @@
         gap: .5rem;
     }
 
-    #doc_menu {
-        flex-grow: .8;
-        margin-top: 1rem;
-        top: 5rem;
-        padding: 0;
+    #filter_button {
+        display: block;
+        height: calc(4rem * .70);
     }
 
     #docs_list {
-        width: 65%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .discover_object {
+        width: 90%;
+    }
+
+    #doc_menu {
+        position: fixed;
+        top: 4rem;
+        right: -50%;
+        width: 30%;
+        height: calc(100dvh - 6rem);
+        z-index: 1;
+        border: none;
+        border-radius: 1rem 0 0 1rem;
+        transition: 600ms ease-in-out;
+        margin: 0;
     }
 
     #thank_you > * {
@@ -332,14 +348,32 @@
         margin: 1rem 0 0;
     }
 
-    #doc_menu {
-        width: 15%;
-        margin-top: 1rem;
-        top: 5rem;
+    #filter_button {
+        display: block;
+        height: calc(4rem * .70);
     }
 
+
     #docs_list {
-        width: 65%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .discover_object {
+        width: 90%;
+    }
+
+    #doc_menu {
+        position: fixed;
+        top: 4rem;
+        right: -50%;
+        width: 25%;
+        height: calc(100dvh - 6rem);
+        z-index: 1;
+        border: none;
+        border-radius: 1rem 0 0 1rem;
+        transition: 600ms ease-in-out;
+        margin: 0;
     }
 
     #thank_you > * {
@@ -452,14 +486,31 @@
         margin: 1rem 0 0;
     }
 
-    #doc_menu {
-        width: 15%;
-        margin-top: 1rem;
-        top: 5rem;
+    #filter_button {
+        display: block;
     }
 
+
     #docs_list {
-        width: 65%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .discover_object {
+        width: 90%;
+    }
+
+    #doc_menu {
+        position: fixed;
+        top: 5rem;
+        right: -50%;
+        width: 25%;
+        height: calc(100dvh - 7rem);
+        z-index: 1;
+        border: none;
+        border-radius: 1rem 0 0 1rem;
+        transition: 600ms ease-in-out;
+        margin: 0;
     }
 
     #thank_you > * {
@@ -572,6 +623,10 @@
         width: 65%;
     }
 
+    .discover_object {
+        width: 95%;
+    }
+
     #thank_you > * {
         flex-grow: 1;
     }
@@ -643,6 +698,14 @@
 
     #doc_menu {
         width: 20%;
+    }
+
+    #docs_list {
+        width: 65%;
+    }
+
+    .discover_object {
+        width: 90%;
     }
 
     #thank_you > * {

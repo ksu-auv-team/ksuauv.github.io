@@ -195,3 +195,14 @@ function filterResults() {
     })
     updateCount();
 }
+
+let side_filter_toggled = false;
+function toggleSideFilter() {
+    if (side_filter_toggled) {
+        document.getElementById('doc_menu').style.right = '-50%';
+        side_filter_toggled  = false;
+    } else {
+        document.getElementById('doc_menu').style.right = '0';
+        side_filter_toggled = true;
+    }
+}
