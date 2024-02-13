@@ -129,11 +129,13 @@ function display_documents(documents) {
         doc_date.innerHTML = `${entry.date.getFullYear()} ${month} ${entry.date.getDate()}`;
         date_icon_container.appendChild(doc_date)
 
-        const download_icon = document.createElement("img");
-        download_icon.src = "../media/download_svg.svg";
-        download_icon.alt = "Downloadable"
-        download_icon.classList.add("download_icon");
-        date_icon_container.appendChild(download_icon);
+        if(entry.tags.includes("download")) {
+            const download_icon = document.createElement("img");
+            download_icon.src = "../media/download_svg.svg";
+            download_icon.alt = "Downloadable"
+            download_icon.classList.add("download_icon");
+            date_icon_container.appendChild(download_icon);
+        }
 
         const doc_summary = document.createElement('p');
         doc_summary.innerHTML = entry.summary;
