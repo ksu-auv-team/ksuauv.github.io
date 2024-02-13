@@ -157,12 +157,16 @@
     }
 
     .card_container {
-        width: 90vw;
+        width: 75vw;
         margin-top: 1rem;
     }
 
     .card_back h3 {
         margin: 1rem 0 0 0;
+    }
+
+    .card_back p {
+        font-size: 1.15rem;
     }
 
     #media_main > div {
