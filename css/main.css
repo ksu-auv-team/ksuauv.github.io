@@ -341,9 +341,13 @@ body {
     margin-bottom: 1rem;
 }
 
-.card_container:hover > .card, .card_container:focus > .card, .card_container:active > .card{
+.flip > .card {
     transform: rotateY(180deg);
 }
+
+/*.card_container:hover > .card, .card_container:focus > .card, .card_container:active > .card{*/
+/*    transform: rotateY(180deg);*/
+/*}*/
 
 .card_front, .card_back {
     width: 100%;
