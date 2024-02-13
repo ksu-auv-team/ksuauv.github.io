@@ -86,3 +86,7 @@ main div {
 .discover {
     width: 55vw;
 }
+
+.discover_object {
+    min-width: 100%;
+}

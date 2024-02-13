@@ -289,7 +289,7 @@ body {
     gap: 5px;
     text-decoration: none;
     cursor: pointer;
-    margin: 0;
+    margin: 1rem 0;
 }
 
 .discover_no_image {
