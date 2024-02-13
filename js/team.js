@@ -15,16 +15,25 @@ document.addEventListener("DOMContentLoaded", function () {
             card.classList.add('flip');
         })
 
-        //Create listener for click
-        card.addEventListener('click', function () {
-            if(card.classList.contains('flip')) { return }
-            //First iterate over all the cards and remove the .flip class if it has it
-            cardContainersList.forEach(function (currentCard) {
-                currentCard.classList.remove('flip');
-            });
+        //Create listener for click only if on mobile
+        if(window.innerWidth <= 768) {
+            card.addEventListener('click', function () {
+                //If already flipped: un-flip
+                if(card.classList.contains('flip')) {
+                    cardContainersList.forEach(function (currentCard) {
+                        currentCard.classList.remove('flip');
+                    });
+                    return
+                }
 
-            card.classList.add('flip');
-        })
+                //First iterate over all the cards and remove the .flip class if it has it
+                cardContainersList.forEach(function (currentCard) {
+                    currentCard.classList.remove('flip');
+                });
+
+                card.classList.add('flip');
+            })
+        }
 
         //Create listener for mouseout and remove all cases of class .flip
         card.addEventListener('mouseout', function () {
@@ -33,4 +42,36 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
     })
+//     END CARD JS
+
+    // Have the title of the page dynamically change every few seconds.
+    const title = document.getElementById('team_attention');
+    const currentYear = new Date().getFullYear();
+    const previous_phrase_index = 0;
+    const phrase_list = [
+        currentYear + " Crew Snapshot",
+        currentYear + " Team Spotlight",
+        "Meet Our Crew: " + currentYear + " Edition",
+        "Team " + currentYear + " Unleashed",
+        "Faces of Success: " + currentYear,
+        "Our " + currentYear + " All-Stars",
+        currentYear + " Dream Team",
+        "The Winning Lineup: " + currentYear,
+        currentYear + "'s Finest Faces",
+        currentYear + " Crew Snapshot",
+        "Behind the Scenes: Team " + currentYear
+    ];
+    setInterval(() => {
+        title.style.opacity = '0';
+        // Keep selecting a random phrase if they are of the same index
+        let current_index;
+        do {
+            current_index = Math.floor(Math.random() * phrase_list.length);
+        } while (current_index === previous_phrase_index);
+
+        setTimeout(() => {
+            title.innerHTML = phrase_list[current_index];
+            title.style.opacity = '1';
+        }, 2000)
+    }, 10000)
 })
