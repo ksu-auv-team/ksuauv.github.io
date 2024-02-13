@@ -121,15 +121,25 @@ function display_documents(documents) {
         const doc_title = document.createElement('h2');
         doc_title.innerHTML = entry.title;
 
+        const date_icon_container = document.createElement('div');
+        date_icon_container.classList.add("content_date_icon");
+
         const doc_date = document.createElement('p');
         const month = entry.date.toLocaleString('en-US', { month: 'long' });
         doc_date.innerHTML = `${entry.date.getFullYear()} ${month} ${entry.date.getDate()}`;
+        date_icon_container.appendChild(doc_date)
+
+        const download_icon = document.createElement("img");
+        download_icon.src = "../media/download_svg.svg";
+        download_icon.alt = "Downloadable"
+        download_icon.classList.add("download_icon");
+        date_icon_container.appendChild(download_icon);
 
         const doc_summary = document.createElement('p');
         doc_summary.innerHTML = entry.summary;
 
         doc_content.appendChild(doc_title);
-        doc_content.appendChild(doc_date);
+        doc_content.appendChild(date_icon_container);
         doc_content.appendChild(doc_summary);
 
         if(entry.photo.trim() !== "") {
