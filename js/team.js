@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                     return }
                 //First, iterate over all the cards and remove the .flip class if it has it
+                // Remove this next block if you want to flip without the others un-flipping
                     cardContainersList.forEach(function (currentCard) {
                         currentCard.classList.remove('flip');
                     });
