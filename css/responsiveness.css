@@ -31,11 +31,11 @@
     }
 
     p {
-        font-size: .8rem;
+        font-size: .92rem;
     }
 
     p a {
-        font-size: .8rem;
+        font-size: .92rem;
     }
 
     header { height: 4rem }
@@ -101,6 +101,7 @@
         position: relative;
         gap: 1rem;
         flex-direction: column;
+        margin: 1rem 0;
     }
 
     #robosub {
