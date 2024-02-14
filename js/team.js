@@ -6,25 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // If on mobile, cards flip on click/tap
     if(window.innerWidth <= 768) {
-        let currentlyFlipped = false; //Keep track if a card is flipped
         console.log("Mode: Mobile");
         cardContainersList.forEach(function (card) {
             card.addEventListener('click', function () {
-
-                if(currentlyFlipped) {  //If already flipped: un-flip
+                if(card.classList.contains('flip')) { //If already flipped, un-flip
                     cardContainersList.forEach(function (currentCard) {
                         currentCard.classList.remove('flip');
                     });
-                    currentlyFlipped = false;
-                } else { // Else --> Flip it
-                    //First, iterate over all the cards and remove the .flip class if it has it
+                    return }
+                //First, iterate over all the cards and remove the .flip class if it has it
                     cardContainersList.forEach(function (currentCard) {
                         currentCard.classList.remove('flip');
                     });
 
                     card.classList.add('flip');
-                    currentlyFlipped = true;
-                }
+
             })
         })
     }
