@@ -30,7 +30,7 @@ input {
 }
 
 #filter_button {
-    position: sticky;
+    position: fixed;
     top: .7rem;
     right: 1rem;
     z-index: 5;
