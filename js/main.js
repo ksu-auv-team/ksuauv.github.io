@@ -21,9 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('doc_link').classList.add('go');
             }
         });
+
+
 });
+const state = {
+    disable_menu: false
+}
 
-
+function setMenuState(boolean) {
+    state.disable_menu = boolean;
+}
 
 function openDialog() {
     window.parent.document.getElementById('dialog').style.display = 'initial';
@@ -35,15 +42,19 @@ function closeDialog() {
 
 let toggled = false;
 function toggleNav() {
-    if(window.innerWidth>769){
-        const iframe = window.parent.document.querySelector('iframe');
-        const nav = iframe.contentDocument.getElementById('nav');
-        const header = document.getElementById('header');
-        // Toggle the 'show' class on the nav element to translate it down or up.
-        header.classList.toggle('show');
-        nav.classList.toggle('show');
+    if(!state.disable_menu) {
+        if(window.innerWidth>769){
+            const iframe = window.parent.document.querySelector('iframe');
+            const nav = iframe.contentDocument.getElementById('nav');
+            const header = document.getElementById('header');
+            // Toggle the 'show' class on the nav element to translate it down or up.
+            header.classList.toggle('show');
+            nav.classList.toggle('show');
+        } else {
+            toggleSideNav()
+        }
     } else {
-        toggleSideNav()
+        alert("Please close the current action to open the menu.");
     }
 }
 

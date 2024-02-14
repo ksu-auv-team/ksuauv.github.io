@@ -107,7 +107,7 @@ function display_documents(documents) {
         newDoc.classList.add('discover_object');
 
         if(entry.tags.includes("download")) {
-            newDoc.download = "";
+            newDoc.download = `${entry.title}`;
         }
 
         const doc_img = document.createElement('img');

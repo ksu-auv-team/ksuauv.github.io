@@ -2,6 +2,11 @@
 
 /*Phones*/
 @media screen and (max-width: 576px) {
+    :root {
+        --navbar_height: 4rem;
+        --navbar_expanded: 4rem; /*No expanded navbar --> Side navbar in this mode*/
+    }
+
     footer {
         flex-direction: column;
         text-align: center;
@@ -37,10 +42,6 @@
     p a {
         font-size: .92rem;
     }
-
-    header { height: 4rem }
-    #header.show { height: 7rem }
-    .graphic_nav { height: 4rem }
 
     .header_home_icon {
         height: 60%;
@@ -286,6 +287,11 @@
 
 /*Tablets*/
 @media screen and (min-width: 577px) and (max-width: 768px) {
+    :root {
+        --navbar_height: 4rem;
+        --navbar_expanded: 4rem; /*No expanded navbar --> Side navbar in this mode*/
+    }
+
     footer {
         padding: 0;
     }
@@ -305,10 +311,6 @@
     p {
         font-size: 1rem;
     }
-
-    header { height: 4rem }
-    #header.show { height: 7rem }
-    .graphic_nav { height: 4rem }
 
     nav a {
         font-size: 1rem;
@@ -428,6 +430,11 @@
 
 /*Tablets and Small Desktops*/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+    :root {
+        --navbar_height: 4rem;
+        --navbar_expanded: 7rem; /*No expanded navbar --> Side navbar in this mode*/
+    }
+
     footer {
         padding: 0;
     }
@@ -572,10 +579,6 @@
     h2 {
         font-size: 1.75rem;
     }
-
-    header { height: 5rem }
-    #header.show { height: 8rem }
-    .graphic_nav { height: 5rem }
 
     .header_home_icon {
         height: 70%;
@@ -724,6 +727,7 @@
     #kirby_main > * {
         width: 75%;
     }
+
 }
 
 /*Any thing larger is the default css. This site was developed on my

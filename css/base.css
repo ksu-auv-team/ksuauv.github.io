@@ -12,6 +12,8 @@
     --text: #000000;
     --mono_back: #101112;
     --text_inverted: #C7C6C7;
+    --navbar_height: 5rem;
+    --navbar_expanded: 8rem;
 }
 
 body {
@@ -37,13 +39,13 @@ header {
     left: 0;
     z-index: 3;
     background: none;
-    height: 5rem;
+    height: var(--navbar_height);
     overflow: hidden;
     transition: 400ms;
 }
 
 #header.show {
-    height: 8rem;
+    height: var(--navbar_expanded);
 }
 
 header iframe {

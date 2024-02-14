@@ -35,6 +35,27 @@
     background: rgba(10,10,10,.8);
 }
 
+#image_title {
+    display: none;
+    min-width: 100%;
+    position: fixed;
+    top: calc(var(--navbar_height) + 1rem);
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 5;
+    font-size: 2rem;
+    color: white;
+    background-color: var(--mono_back);
+    padding: .5rem 1rem;
+    border-bottom: solid 2px var(--text_inverted);
+    border-top: solid 2px var(--text_inverted);
+    margin: 0;
+    border-radius: .5rem;
+    text-align: center;
+    transition: 500ms;
+    opacity: 0;
+}
+
 #shroud {
     display: none;
     width: 100%;
@@ -45,12 +66,17 @@
 }
 
 #shroud::before {
-    max-width: 100%;
+    min-width: 85vw;
+    background-color: var(--mono_back);
     font-size: 2rem;
     font-weight: bold;
     position: absolute;
-    bottom: 10%;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    color: var(--text_inverted);
+    bottom: 7%;
     left: 50%;
+    text-align: center;
     transform: translateX(-50%);
     content: "Press Outside Photo Or Enter To Exit";
 }
