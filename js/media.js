@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const img = this.querySelector('img');
             document.getElementById("enlarged_photo").src = img.src;
             const image_title = document.getElementById('image_title');
-            image_title.innerText = (getComputedStyle(image, ':before').content);
+            //Get image title for :before pseudo element and get rid of quotation marks
+            image_title.innerText = (getComputedStyle(image, ':before').content).replace(/^["']|["']$/g, '');
             toggleEnlargedImage();
         });
 
