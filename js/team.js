@@ -2,47 +2,56 @@ document.addEventListener("DOMContentLoaded", function () {
     // Select card_containers and assign to an array
     const cardContainers = document.getElementsByClassName('card_container');
     const cardContainersList = Array.from(cardContainers);
-    // Iterate over the array add the .flip class to the selected card
-    cardContainersList.forEach(function (card) {
-        //Create listener for hovering over
-        card.addEventListener('mouseover', function () {
-            if(card.classList.contains('flip')) { return }
-            //First iterate over all the cards and remove the .flip class if it has it
-            cardContainersList.forEach(function (currentCard) {
-                currentCard.classList.remove('flip');
-            });
+    // Idea: Iterate over the array add the .flip class to the selected card. Remove when needed.
 
-            card.classList.add('flip');
-        })
-
-        //Create listener for click only if on mobile
-        if(window.innerWidth <= 768) {
+    // If on mobile, cards flip on click/tap
+    if(window.innerWidth <= 768) {
+        let currentlyFlipped = false; //Keep track if a card is flipped
+        console.log("Mode: Mobile");
+        cardContainersList.forEach(function (card) {
             card.addEventListener('click', function () {
-                //If already flipped: un-flip
-                if(card.classList.contains('flip')) {
+
+                if(currentlyFlipped) {  //If already flipped: un-flip
                     cardContainersList.forEach(function (currentCard) {
                         currentCard.classList.remove('flip');
                     });
-                    return
-                }
+                    currentlyFlipped = false;
+                } else { // Else --> Flip it
+                    //First, iterate over all the cards and remove the .flip class if it has it
+                    cardContainersList.forEach(function (currentCard) {
+                        currentCard.classList.remove('flip');
+                    });
 
+                    card.classList.add('flip');
+                    currentlyFlipped = true;
+                }
+            })
+        })
+    }
+
+    //If on PC, cards flip on mouse hovering
+    if(window.innerWidth >= 769) {
+        console.log("Mode: PC")
+        cardContainersList.forEach(function (card) {
+            //Create listener for hovering over
+            card.addEventListener('mouseover', function () {
+                if(card.classList.contains('flip')) { return }
                 //First iterate over all the cards and remove the .flip class if it has it
                 cardContainersList.forEach(function (currentCard) {
                     currentCard.classList.remove('flip');
                 });
-
                 card.classList.add('flip');
             })
-        }
-
-        //Create listener for mouseout and remove all cases of class .flip
-        card.addEventListener('mouseout', function () {
-            cardContainersList.forEach(function (currentCard) {
-                currentCard.classList.remove('flip');
-            });
+            //Create listener for mouseout and remove all cases of class .flip
+            card.addEventListener('mouseout', function () {
+                cardContainersList.forEach(function (currentCard) {
+                    currentCard.classList.remove('flip');
+                });
+            })
         })
-    })
-//     END CARD JS
+    }
+/*-------------------------------------------   END CARD FLIPPING JS    -------------------------------------------*/
+
 
     // Have the title of the page dynamically change every few seconds.
     const title = document.getElementById('team_attention');
@@ -74,4 +83,5 @@ document.addEventListener("DOMContentLoaded", function () {
             title.style.opacity = '1';
         }, 2000)
     }, 10000)
-})
+
+}) // This closing bracket & parentheses is for the DOMContentLoaded Listener on line 1. All code goes inside here
