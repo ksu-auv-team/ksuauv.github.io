@@ -16,9 +16,20 @@
     "date_published": "2023-10-24",
     "documentation_url": "../html/sub_documentation/2023_sub_empoleon.html",
     "photo_url": "",
-    "photo_alt_description": "No Photo",
+    "photo_alt_description": "",
     "summary": "Introducing the 2023 AUV, Empoleon, developed and built by the KSU AUV team. This documentation being updated as the project continues to grow.",
     "tags": ["auv"]
+  },
+
+  {
+    "title": "2016-2017 KSU AUV Team Constitution",
+    "author": "Autonomous Underwater Vehicle Team at Kennesaw State University",
+    "date_published": "2016-01-01",
+    "documentation_url": "../docs/Autonomous_Underwater_Vehicle_Team_Constitution_16-17.pdf",
+    "photo_url": "",
+    "photo_alt_description": "",
+    "summary": "The official KSU AUV constitution used to identify and state a purpose at Kennesaw State University.",
+    "tags": ["official", "download"]
   },
 
   {
@@ -27,7 +38,7 @@
     "date_published": "2021-01-01",
     "documentation_url": "../docs/Autonomous_Underwater_Vehicle_Team_Constitution_21-22.pdf",
     "photo_url": "",
-    "photo_alt_description": "No Photo",
+    "photo_alt_description": "",
     "summary": "The official KSU AUV constitution used to identify and state a purpose at Kennesaw State University.",
     "tags": ["official", "download"]
   },
@@ -38,8 +49,19 @@
     "date_published": "2023-08-10",
     "documentation_url": "../docs/auv_documentation/2023_sub_empoleon/Empoleon_Phase_2_Concept_Update_1.pdf",
     "photo_url": "2023_empoleon_media/piplup_render_1_D.png",
-    "photo_alt_description": "No Photo",
+    "photo_alt_description": "Empoleon Phase 2 Concept",
     "summary": "Notes regarding the design of project Empoleon which encases details over dimensions, materials, and structure.",
+    "tags": ["auv", "download"]
+  },
+
+  {
+    "title": "2023 Robosub Team Handbook",
+    "author": "Robonation",
+    "date_published": "2023-06-01",
+    "documentation_url": "../docs/2023_Robosub_Handbook.pdf",
+    "photo_url": "",
+    "photo_alt_description": "",
+    "summary": "The official robosub team handbook which includes all the information needed to compete at the RoboSub competition. The handbook includes task descriptions, rules, and requirements, and other guidance and specifications.",
     "tags": ["official", "download"]
   }
 ]
