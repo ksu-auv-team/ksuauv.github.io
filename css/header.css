@@ -2,3 +2,7 @@ body {
     height: fit-content;
     overflow: hidden;
 }
+
+#menu_icon {
+    border-radius: 0;
+}
