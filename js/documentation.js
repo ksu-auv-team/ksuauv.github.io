@@ -4,6 +4,7 @@
 let documents = [];
 let currentOrder = [];
 
+// Displays how many results are visible
 function updateCount(condition) {
     if(condition === 0) {
         document.getElementById("result_count").innerText = `${currentOrder.length} Results`;
@@ -19,6 +20,8 @@ function updateCount(condition) {
         document.getElementById("result_count").innerText = `${visibleCount} Results`;
     }
 }
+
+// Function to retrieve the documentation index JSON and create entry objects
 function document_list() {
     return fetch("../docs/documentation_index.json")
         .then((response) => {
@@ -57,6 +60,7 @@ function document_list() {
         })
 }
 
+// Process what to do after parsing the documentation index JSON
 document_list().then(() => {
     const sortedDocuments = documents.sort((a,b) => b.date.getTime() - a.date.getTime());
     display_documents(sortedDocuments);
@@ -64,6 +68,7 @@ document_list().then(() => {
     updateCount(0);
 });
 
+// Called if any of the sort buttons are pressed
 function sort_docs() {
     const sorting_radios = document.querySelectorAll('input[name="sorting"]');
 
@@ -95,19 +100,27 @@ function sort_docs() {
     updateCount();
 }
 
+// Helper function used to reset the list
 function clearDocumentList() {
     document.getElementById('docs_list').innerHTML = '';
     updateCount();
 }
 
+// Create HTML elements, input information from entries created in document_list() and display them
 function display_documents(documents) {
     documents.forEach((entry) => {
         const newDoc = document.createElement('a');
         newDoc.href = entry.documentation_link;
         newDoc.classList.add('discover_object');
 
+        // Set the download attribute and give the name of the file being downloaded
         if(entry.tags.includes("download")) {
             newDoc.download = `${entry.title}`;
+        }
+
+        // Open the link in a new page as it leads to page not on this site
+        if(entry.tags.includes('external')) {
+            newDoc.target = "_blank";
         }
 
         const doc_img = document.createElement('img');
@@ -168,6 +181,7 @@ function display_documents(documents) {
     })
 }
 
+// Un-filter the entries on the page
 function unFilterResults() {
     const document_list = document.getElementsByClassName("discover_object");
     for (const item of document_list) {
@@ -175,6 +189,7 @@ function unFilterResults() {
     }
 }
 
+// Filters results based on the tags selected
 function filterResults() {
     unFilterResults();
     let filters = [];
@@ -196,6 +211,7 @@ function filterResults() {
     updateCount();
 }
 
+// Used for mobile if the sort/filter area does not fit
 let side_filter_toggled = false;
 function toggleSideFilter() {
     if (side_filter_toggled) {
