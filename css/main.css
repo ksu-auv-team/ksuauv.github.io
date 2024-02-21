@@ -432,12 +432,6 @@ body {
     padding-bottom: 1rem;
 }
 
-.download_icon {
-    max-height: 1.4rem;
-    max-width: 1.4rem;
-    border-radius: 0;
-}
-
 .member_social {
     transition: 400ms;
 }

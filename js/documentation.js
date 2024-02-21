@@ -155,8 +155,16 @@ function display_documents(documents) {
             const download_icon = document.createElement("img");
             download_icon.src = "../media/download_svg.svg";
             download_icon.alt = "Downloadable"
-            download_icon.classList.add("download_icon");
+            download_icon.classList.add("document_icon");
             date_icon_container.appendChild(download_icon);
+        }
+
+        if(entry.tags.includes("external")) {
+            const external_icon = document.createElement("img");
+            external_icon.src = "../media/external_svg.svg";
+            external_icon.alt = "External SIte"
+            external_icon.classList.add("document_icon");
+            date_icon_container.appendChild(external_icon);
         }
 
         const doc_summary = document.createElement('p');
