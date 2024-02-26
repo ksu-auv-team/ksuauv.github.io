@@ -71,3 +71,7 @@
     font-weight: bold;
     color: var(--theme);
 }
+
+.sponsor_wrapper img {
+    max-width: 50%;
+}
