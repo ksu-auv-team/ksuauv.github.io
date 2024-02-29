@@ -294,7 +294,12 @@
         width: 100%;
     }
 
-    #sponsorship_packet {
+    #packets {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sponsorship_packet {
         width: 100%;
     }
 }
@@ -339,7 +344,7 @@
     }
 
     .main_wrapper, .discover, #general_information, #robosub, #thank_you,
-    .empoleon_section {
+    .empoleon_section, #new_sponsors, #sponsor_list {
         width: 90%;
     }
 
@@ -421,10 +426,6 @@
         font-size: 1.2rem;
     }
 
-    #sponsor_list {
-        width: 85%;
-    }
-
     .sponsor_wrapper > img {
         width: 50%;
     }
@@ -446,7 +447,12 @@
     }
 
     /*    Sponsor Page*/
-    #sponsorship_packet {
+    #packets {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sponsorship_packet {
         width: 100%;
     }
 }
@@ -597,7 +603,13 @@
     }
 
     /*    Sponsor Page*/
-    #sponsorship_packet {
+
+    #packets {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sponsorship_packet {
         width: 100%;
     }
 }
@@ -704,8 +716,8 @@
     }
 
 /*    Sponsor Page*/
-    #sponsorship_packet {
-        width: 100%;
+    .sponsorship_packet {
+        width: 49%;
     }
 }
 
@@ -774,8 +786,8 @@
     }
 
 /*    Sponsor Page*/
-    #sponsorship_packet {
-        width: 100%;
+    .sponsorship_packet {
+        width: 48%;
     }
 }
 

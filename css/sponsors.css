@@ -76,7 +76,27 @@ p {
     max-width: 50%;
 }
 
-#sponsorship_packet {
-    width: 65%;
-    aspect-ratio: 3/4;
+#packets {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#packet_download {
+    aspect-ratio: 1;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 2rem;
+}
+
+#packet_download img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.sponsorship_packet {
+    width: 47%;
+    height: fit-content;
 }
