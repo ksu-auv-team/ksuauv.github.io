@@ -64,7 +64,7 @@
     }
 
     .main_wrapper, .discover, #general_information, #robosub, #thank_you,
-    .empoleon_section {
+    .empoleon_section, #new_sponsors {
         width: 95dvw;
     }
 
@@ -287,6 +287,16 @@
     .image_row .row_figure {
         width: 90%;
     }
+
+/*    Sponsor Page  */
+    .sponsor_wrapper img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #sponsorship_packet {
+        width: 100%;
+    }
 }
 
 /*Tablets*/
@@ -434,6 +444,11 @@
     #kirby_main .figure_row {
         flex-direction: row;
     }
+
+    /*    Sponsor Page*/
+    #sponsorship_packet {
+        width: 100%;
+    }
 }
 
 /*Tablets and Small Desktops*/
@@ -580,6 +595,11 @@
     #kirby_main .figure_row {
         flex-direction: row;
     }
+
+    /*    Sponsor Page*/
+    #sponsorship_packet {
+        width: 100%;
+    }
 }
 
 /*Desktops*/
@@ -682,6 +702,11 @@
     #kirby_main > * {
         width: 85%;
     }
+
+/*    Sponsor Page*/
+    #sponsorship_packet {
+        width: 100%;
+    }
 }
 
 /*Large Desktops*/
@@ -746,6 +771,11 @@
 
     #image_title {
         font-size: 1.5rem;
+    }
+
+/*    Sponsor Page*/
+    #sponsorship_packet {
+        width: 100%;
     }
 }
 

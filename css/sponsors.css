@@ -1,5 +1,13 @@
 @import "main.css";
 
+h1 {
+    text-align: center;
+}
+
+p {
+    color: var(--text_inverted);
+}
+
 .hero {
     background: url("../media/sponsors.jpg") 50%;
     background-size: cover;
@@ -14,7 +22,7 @@
     flex-direction: column;
 }
 
-#thank_you {
+#thank_you, #new_sponsors {
     margin-top: 2rem;
     margin-bottom: 4rem;
     width: 75%;
@@ -24,20 +32,12 @@
     gap: 2rem;
 }
 
-#thank_you_message {
-    color: var(--text_inverted);
-    width: 25%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-#thank_you_message > * {
+#thank_you > p {
     color: var(--text_inverted);
 }
 
 #thank_you img {
-    width: 30%;
+    width: 50%;
 }
 
 #sponsor_list {
@@ -74,4 +74,9 @@
 
 .sponsor_wrapper img {
     max-width: 50%;
+}
+
+#sponsorship_packet {
+    width: 65%;
+    aspect-ratio: 3/4;
 }

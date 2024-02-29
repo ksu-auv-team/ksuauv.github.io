@@ -74,5 +74,16 @@
     "photo_alt_description": "",
     "summary": "Meghan Cooper interviews the 2023 KSU AUV President Dante Orlando over his experience and thoughts as a member of the AUV team. Orlando shares his thoughts about his experience as well as what his favorite parts are. ",
     "tags": ["articles", "external"]
+  },
+
+  {
+    "title": "2024 AUV Sponsorship Packet",
+    "author": "Autonomous Underwater Vehicle Team at Kennesaw State University",
+    "date_published": "2024-02-22",
+    "documentation_url": "../docs/KSU_AUV_2024_Sponsorship_Packet.pdf",
+    "photo_url": "",
+    "photo_alt_description": "",
+    "summary": "Our AUV team is always looking to meet new people and create meaningful connections. Should anyone want to support our organization, please take a look at our sponsorship packet to get an idea on how to support us. We look forward to your support!",
+    "tags": ["official", "download"]
   }
 ]
