@@ -200,6 +200,19 @@
         font-size: .8rem;
     }
 
+    #image_controls {
+        top: unset;
+        bottom: 12%;
+    }
+
+    #image_controls button {
+        width: 3rem;
+    }
+
+    #close_enlarged {
+        width: 5rem;
+    }
+
     #image_title, #shroud:before {
         font-size: 1rem;
     }

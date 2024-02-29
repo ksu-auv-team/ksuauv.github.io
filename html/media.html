@@ -38,7 +38,19 @@
 
         <div id="enlarged_photo_container">
             <span id="shroud" class="dialog_shroud" onclick="toggleEnlargedImage()"></span>
-            <img id="enlarged_photo" src="../media/2023_tech_fest_pie.jpg" alt="Enlarged Photo">
+            <img data-imageID="0" id="enlarged_photo" src="../media/2023_tech_fest_pie.jpg" alt="Enlarged Photo">
+            <div id="image_controls">
+                <button onclick="changePhoto(-1)">
+                    <img src="../media/left_svg.svg" alt="Previous">
+                </button>
+                <button onclick="changePhoto(1)">
+                    <img src="../media/right_svg.svg" alt="Next">
+                </button>
+            </div>
+
+            <button id="close_enlarged" onclick="toggleEnlargedImage()">
+                <img src="../media/close_x_svg.svg" alt="Close">
+            </button>
         </div>
 
     <main id="media_main">

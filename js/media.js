@@ -1,21 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
     fetchImageUrls().then(() => {
-        /*-----------------------------------------------   END FETCH IMAGES -----------------------------------------------*/
 
+        /*-----------------------------------------------   END FETCH IMAGES -----------------------------------------------*/
         /*-----------------------------------------------   START ADDING IMAGE FUNCTIONS  -----------------------------------------------*/
         const images = document.querySelectorAll('.media_container');
         images.forEach(image => {
+            image.id = `${global_current_id}`;
+            global_current_id++;
             image.addEventListener('click', function() { // Update enlarged photo and title for clicked image
                 const img = this.querySelector('img');
-                document.getElementById("enlarged_photo").src = img.src;
-                toggleEnlargedImage();
+                if(img.alt.startsWith("AUV")) {
+                    document.getElementById("enlarged_photo").src = `https://res.cloudinary.com/deo2ttpox/image/upload/q_50/${img.alt}`;
+                } else {
+                    document.getElementById("enlarged_photo").src = img.src;
+                }
+                toggleEnlargedImage(image.id);
             });
 
             image.addEventListener('keydown', function(event) {
                 if (event.key === 'Enter') {
                     const img = this.querySelector('img');
                     document.getElementById("enlarged_photo").src = img.src;
-                    toggleEnlargedImage();
+                    toggleEnlargedImage(image.id);
                 }
             });
         });
@@ -23,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+// For assigning images their id and to know how many images are currently on the page
+let global_current_id = 0;
 
 /*-----------------------------------------------   DISPLAY EXTERNAL IMAGES   -----------------------------------------------*/
 
@@ -58,7 +66,7 @@ function createImage(url_end, year) {
     //create the image and set its values
     const img = document.createElement("img");
     //deo2ttpox is the username | q_35 means retrieve at quality: 35%
-    img.src = `https://res.cloudinary.com/deo2ttpox/image/upload/q_35/${url_end}`;
+    img.src = `https://res.cloudinary.com/deo2ttpox/image/upload/q_15/${url_end}`;
     img.alt = url_end;
     img.loading = "lazy";
 
@@ -69,9 +77,12 @@ function createImage(url_end, year) {
 /*-----------------------------------------------   END DISPLAY EXTERNAL IMAGES   -----------------------------------------------*/
 
 
+/*-----------------------------------------------   START ENLARGED PHOTO CONTROLS   -----------------------------------------------*/
+
 let enlarged = false;
-function toggleEnlargedImage() {
+function toggleEnlargedImage(photo_id) {
     const enlargedPhoto = document.getElementById('enlarged_photo');
+    enlargedPhoto.setAttribute('data-imageID', photo_id);
 
     if (!enlarged) { // Open image
         document.getElementById('enlarged_photo_container').style.display = 'flex';
@@ -116,3 +127,35 @@ function displayOff() {
     document.getElementById('shroud').style.display = 'none';
     document.getElementById('enlarged_photo').style.display = 'none';
 }
+
+// Pan through photos when enlarged
+function changePhoto(control) {
+    // get element
+    const enlargedPhoto = document.getElementById('enlarged_photo');
+    // Retrieve custom value holding id of the img (it is a string so parse it)
+    // EnlargedPhoto has this on a custom attribute because it is already assigned the "enlarged_photo" id
+    let current_id = enlargedPhoto.getAttribute('data-imageID');
+    current_id = parseInt(current_id) + control; //Previous = -1, Next = 1. Add to get new value
+    if (parseInt(current_id) < 0) { // Go to end of list if user presses previous when already on the first
+        current_id = global_current_id-1;
+        enlargedPhoto.setAttribute('data-imageID', current_id.toString());
+    } else if(parseInt(current_id) > global_current_id-1) { // If user  goes past end of list, start over
+        current_id = 0;
+        enlargedPhoto.setAttribute('data-imageID', current_id.toString());
+    }
+    else { // Else just go to next photo
+        enlargedPhoto.setAttribute('data-imageID', current_id);
+    }
+
+    //Use the id of the photo from before to get it's container and select the image
+    const newPhotoContainer = document.getElementById(current_id);
+    const img = newPhotoContainer.querySelector('img');
+    //If it is an external from cloudinary, then adjust for better quality photo
+    if(img.alt.startsWith("AUV")) {
+        document.getElementById("enlarged_photo").src = `https://res.cloudinary.com/deo2ttpox/image/upload/q_50/${img.alt}`;
+    } else {
+        document.getElementById("enlarged_photo").src = img.src;
+    }
+}
+
+/*-----------------------------------------------   END ENLARGED PHOTO CONTROLS   -----------------------------------------------*/
