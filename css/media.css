@@ -114,24 +114,6 @@
     overflow: hidden;
 }
 
-.media_container::before {
-    color: var(--text_inverted);
-    padding: .5rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    content: "";
-    width: 100%;
-    height: fit-content;
-    position: absolute;
-    bottom: -50%;
-    left: 0;
-    background: linear-gradient(transparent, 5%, var(--text));
-    opacity: .8;
-    transition: 400ms;
-    transition-delay: 200ms;
-}
-
 .media_container:hover {
     scale: 1.02;
 }
