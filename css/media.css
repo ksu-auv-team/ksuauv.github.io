@@ -105,7 +105,7 @@
 
 #image_controls {
     position: fixed;
-    top: calc(var(--navbar_expanded) + 1rem);
+    top: calc(var(--navbar_height) + 1rem);
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -126,11 +126,12 @@
 #close_enlarged {
     background-color: transparent;
     position: fixed;
-    top: calc(var(--navbar_expanded) + 1rem);
+    top: calc(var(--navbar_height) + 1rem);
     right: 2%;
     z-index: 2;
-    width: 7rem;
+    width: 5rem;
     aspect-ratio: 1;
+    padding: 0;
 }
 
 .media_container {
