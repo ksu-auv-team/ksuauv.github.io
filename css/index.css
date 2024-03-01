@@ -48,20 +48,25 @@ main div {
 }
 
 .quick_link_object {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background: var(--header);
     width: calc(25% - 1rem);
-    height: fit-content;
     border-radius: 1rem;
     text-decoration: none;
 }
 
-.quick_link_object > img, .quick_link_object > svg {
+.quick_link_object img, .quick_link_object > svg {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
+}
+
+.quick_link_object img {
+    object-fit: cover;
+    aspect-ratio: 1;
 }
 
 .quick_link_content {
@@ -80,7 +85,7 @@ main div {
     font-weight: bold;
     height: fit-content;
     margin: 0;
-    padding: .5rem 0;
+    padding: .2rem 0;
 }
 
 .discover {

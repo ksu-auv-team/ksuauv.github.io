@@ -366,7 +366,7 @@
     }
 
     .quick_link_object {
-        width: 42%;
+        width: calc(50dvw - 3rem);
     }
 
     .upper_offset_row {
@@ -561,6 +561,11 @@
 
     .discover_object {
         width: 90%;
+    }
+
+    .quick_link_object {
+        width: calc(50% - 1rem);
+        flex-grow: 0;
     }
 
     #doc_menu {
