@@ -5,15 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentPageUrl = window.parent.location.pathname;
         const currentPageEnd = currentPageUrl.split('/').pop();
         const navLinks = document.querySelectorAll("nav a");
-        const documentationPages = ["2020_sub_kirby.html", "2023_sub_empoleon.html"];
+        const documentationPages = ["2020_sub_kirby.html", "2023_sub_gyarados.html"];
 
         navLinks.forEach((link) => {
 
             const linkHref = link.getAttribute("href");
-            // alert(currentPageEnd + " = " + documentationPages[0] + "\nlinkhref: " + linkHref + "\nCurrentButton: " + link)
 
             if (currentPageUrl === linkHref) {
-                // link.classList.add("active");
                 document.getElementById('doc_link').classList.add('active');
             }
 
