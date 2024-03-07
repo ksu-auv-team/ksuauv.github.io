@@ -1,7 +1,7 @@
 [
   {
     "title": "2020 AUV 'Kirby' Documentation",
-    "author": "",
+    "author": "Autonomous Underwater Vehicle Team at Kennesaw State University",
     "date_published": "2020-01-01",
     "documentation_url": "../html/sub_documentation/2020_sub_kirby.html",
     "photo_url": "2020_kirby_documentation/2020_sub_kirby.jpg",
@@ -11,12 +11,12 @@
   },
 
   {
-    "title": "2023 AUV 'Empoleon Concept' Documentation",
-    "author": "",
+    "title": "2023 AUV 'Gyarados Concept' Documentation",
+    "author": "Autonomous Underwater Vehicle Team at Kennesaw State University",
     "date_published": "2023-10-24",
-    "documentation_url": "../html/sub_documentation/2023_sub_empoleon.html",
-    "photo_url": "",
-    "photo_alt_description": "",
+    "documentation_url": "../html/sub_documentation/2023_sub_gyarados.html",
+    "photo_url": "https://res.cloudinary.com/deo2ttpox/image/upload/q_15/AUV2024/Mechanical%20February%20Workshop%20Q.jpg",
+    "photo_alt_description": "Gyarados Frame",
     "summary": "Introducing the 2023 AUV, Empoleon, developed and built by the KSU AUV team. This documentation being updated as the project continues to grow.",
     "tags": ["auv"]
   },
@@ -44,13 +44,13 @@
   },
 
   {
-    "title": "Empoleon Phase 2 Concept Update 1",
+    "title": "Gyarados Phase 2 Concept Update 1",
     "author": "2023 Secretary: Sean Schoenherr",
     "date_published": "2023-08-10",
-    "documentation_url": "../docs/auv_documentation/2023_sub_empoleon/Empoleon_Phase_2_Concept_Update_1.pdf",
-    "photo_url": "2023_empoleon_media/piplup_render_1_D.png",
-    "photo_alt_description": "Empoleon Phase 2 Concept",
-    "summary": "Notes regarding the design of project Empoleon which encases details over dimensions, materials, and structure.",
+    "documentation_url": "../docs/auv_documentation/2023_sub_gyarados/Gyarados_Phase_2_Concept_Update_1.pdf",
+    "photo_url": "2023_gyarados_media/piplup_render_1_D.png",
+    "photo_alt_description": "Gyarados Phase 2 Concept",
+    "summary": "Notes regarding the design of project Gyarados which encases details over dimensions, materials, and structure.",
     "tags": ["auv", "download"]
   },
 

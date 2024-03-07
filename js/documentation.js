@@ -124,8 +124,13 @@ function display_documents(documents) {
         }
 
         const doc_img = document.createElement('img');
-        if(entry.photo.trim() !== "") {
-            doc_img.src = `../media/${entry.photo}`;
+        if(entry.photo.trim() !== "") { // If an external link, append the link, if not, set the directory location. Also attach given alt text
+            if(entry.photo.startsWith('https')) {
+                doc_img.src = entry.photo;
+            } else {
+                doc_img.src = `../media/${entry.photo}`;
+            }
+
             doc_img.alt = entry.photo_alt;
         }
 
