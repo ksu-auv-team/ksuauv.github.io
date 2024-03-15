@@ -64,7 +64,7 @@
     }
 
     .main_wrapper, .discover, #general_information, #robosub, #thank_you,
-    .empoleon_section, #new_sponsors {
+    .auv_section, #new_sponsors {
         width: 95dvw;
     }
 
@@ -361,7 +361,7 @@
     }
 
     .main_wrapper, .discover, #general_information, #robosub, #thank_you,
-    .empoleon_section, #new_sponsors, #sponsor_list {
+    .auv_section, #new_sponsors, #sponsor_list {
         width: 90%;
     }
 
@@ -527,7 +527,7 @@
     }
 
     .main_wrapper, .discover, #general_information, #robosub, #thank_you,
-    .empoleon_section {
+    .auv_section {
         width: 90%;
     }
 
@@ -685,7 +685,7 @@
     }
 
     .main_wrapper, .discover, #general_information, #robosub, #thank_you,
-    .empoleon_section {
+    .auv_section {
         width: 85%;
     }
 
@@ -772,7 +772,7 @@
     }
 
     .main_wrapper, .discover, #general_information, #robosub, #thank_you,
-        .empoleon_section {
+        .auv_section {
         width: 75%;
     }
 

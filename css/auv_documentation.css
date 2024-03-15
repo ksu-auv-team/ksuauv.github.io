@@ -21,12 +21,16 @@ section {
     align-items: center;
 }
 
+li {
+    color: white;
+}
+
 section h3 {
     align-self: flex-start;
 }
 
 .row {
-    padding: 3rem;
+    padding: 0;
     gap: 1rem;
 }
 
@@ -35,7 +39,7 @@ section h3 {
     background-size: cover;
 }
 
-#empoleon_hero {
+#auv_hero {
     background: url("../media/2023_gyarados_media/piplup_render_1_F.png") center;
     background-size: cover;
 }
