@@ -8,12 +8,13 @@ This site is built using basic HTML, CSS, and JavaScript in order to avoid frame
 The website is built keeping in mind that multiple people will work on it in the future.
 Therefore, the site is made to accommodate updates and changes.
 
+Note: All photos for the media page after 2024 are stored in Cloudinary. Should someone want
+access, contact Sergio | Discord: Sergio SA
+
 ## Requirements
 
 - Basic requirements are found in ``docs/Official Website Guidelines.pdf``.
 - Information for the site is at ``docs/information.md``.
-  - Feel free to add your own suggestion at the bottom.
-    - Add like as shown: ``Name: Suggestion``.
 - The sites used for reference are the following:
   - https://bumblebee.sg/ | 2022's Website 1st place
   - https://muddsub.org/  | 2022's Website 2nd Place
