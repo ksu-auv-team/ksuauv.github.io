@@ -26,7 +26,8 @@ main div {
     object-fit: cover;
 }
 
-iframe.video_yt {
+/* Videos on Home Page */
+iframe {
     width: 100%;
     aspect-ratio: 16/9;
     margin: 1rem 0;
