@@ -275,7 +275,7 @@ body {
 }
 
 .colored_section {
-    background: var(--background_secondary);
+    background: var(--background_tertiary);
 }
 
 .colored_section > * {

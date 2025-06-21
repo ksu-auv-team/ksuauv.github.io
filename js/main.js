@@ -5,7 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentPageUrl = window.parent.location.pathname;
         const currentPageEnd = currentPageUrl.split('/').pop();
         const navLinks = document.querySelectorAll("nav a");
-        const documentationPages = ["2020_sub_kirby.html", "2023_sub_gyarados.html"];
+        const documentationPages = [
+            "2020_sub_kirby.html",
+            // "2023_sub_gyarados.html"
+            "2025_sub.html"
+        ];
 
         navLinks.forEach((link) => {
 
@@ -19,8 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('doc_link').classList.add('go');
             }
         });
-
-
 });
 
 const state = {

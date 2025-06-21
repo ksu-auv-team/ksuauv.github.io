@@ -19,13 +19,14 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: var(--background_mono_dark);
 }
 
 li {
     color: white;
 }
 
-section h3 {
+section h3, section h2 {
     align-self: flex-start;
 }
 
@@ -42,6 +43,10 @@ section h3 {
 #auv_hero {
     background: url("../media/2023_gyarados_media/piplup_render_1_F.png") center;
     background-size: cover;
+}
+
+#overview {
+    background: none;
 }
 
 .section_title {

@@ -3,39 +3,75 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="icon" href="../media/favicon.ico">
+    <link rel="icon" href="../../media/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KSU AUV | Empty Page</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/responsiveness.css">
-    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/auv_documentation.css">
+    <link rel="stylesheet" href="../../css/responsiveness.css">
+    <script src="../../js/main.js"></script>
 </head>
 
 <header id="header" class="">
-    <iframe src="header.html"></iframe>
+    <iframe src="../header.html"></iframe>
 </header>
 
 <div class="dialog" id="dialog">
     <span class="dialog_shroud" onclick="closeDialog()"></span>
-    <iframe class="search_dialog" src="search.html"></iframe>
+    <iframe class="search_dialog" src="../search.html"></iframe>
 </div>
 
 <body>
+    <iframe id="side_nav" src="../../html/side_nav.html"></iframe>
     <div class="hero">
         <div>
             <h1 class="text_centered underlined">Page Title</h1>
-            <p>Page contents?</p>
+            <p>Hero Summary</p>
         </div>
     </div>
 
+    <main class="documentation_main">
+        <section id="overview">
+            <button class="section_title themed_text">Overview</button>
 
+            <p class="text_inverted">
+                Welcome to the documentation for the 2025 Autonomous Underwater Vehicle (AUV), SUB-Name, developed by the Kennesaw State University AUV team.
+                This documentation provides a comprehensive insight into the design, construction, and the AUV offering a detailed overview of its
+                electrical, mechanical, and software components.
+            </p>
+        </section>
+
+        <section class="colored_section">
+            <h2>Mechanical Design</h2>
+
+            <p>
+                Mechanical Stuff
+            </p>
+        </section>
+
+        <section>
+            <h2>Electrical Design</h2>
+
+            <p class="text_inverted">
+                Electrical Stuff
+            </p>
+        </section>
+
+        <section class="colored_section">
+            <h2>Software Design</h2>
+
+            <p>
+                Software Stuff
+            </p>
+        </section>
+    </main>
 </body>
 
 <footer>
-    <img class="footer_img" src="../media/auv_est_cut.png" alt="KSU_AUV_Footer_Logo">
+    <img class="footer_img" src="../../media/auv_est_cut.png" alt="KSU_AUV_Footer_Logo">
 
     <div class="footer_contact">
         <h2>Contact</h2>
@@ -51,7 +87,7 @@
 
         <div class="social_links">
             <a href="https://owllife.kennesaw.edu/organization/auv" target="_blank" class="footer_link_svg">
-                <img src="../media/ksu_logo.png" alt="KSU Logo">
+                <img src="../../media/ksu_logo.png" alt="KSU Logo">
             </a>
 
             <a href="https://www.instagram.com/ksu.auv/" target="_blank" class="footer_link_svg">
