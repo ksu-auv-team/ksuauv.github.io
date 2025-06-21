@@ -110,8 +110,6 @@ nav {
     background: var(--theme);
     padding: 0 1rem;
     height: 3rem;
-    transition: 400ms;
-    z-index: +1;
 }
 
 nav a {

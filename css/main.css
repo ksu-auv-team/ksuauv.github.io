@@ -62,9 +62,9 @@ body {
     transition: 600ms ease-in-out;
 }
 
-#nav.show {
-    transform: translateY(3rem); /* Move the content down by 3rem when 'show' class is applied */
-}
+/*#nav.show {*/
+/*    transform: translateY(3rem); !* Move the content down by 3rem when 'show' class is applied *!*/
+/*}*/
 
 .header_home_icon {
     border-radius: .5rem;

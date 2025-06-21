@@ -47,6 +47,10 @@
         height: 60%;
     }
 
+    #top_nav {
+        display: none;
+    }
+
     nav a {
         font-size: .5rem;
     }
@@ -348,6 +352,10 @@
         font-size: 1rem;
     }
 
+    #top_nav {
+        display: none;
+    }
+
     nav a {
         font-size: 1rem;
     }
@@ -512,6 +520,10 @@
 
     .header_home_icon {
         height: 70%;
+    }
+
+    #top_nav {
+        display: none;
     }
 
     nav a {
@@ -762,7 +774,7 @@
 }
 
 /*Large Desktops*/
-@media screen and (min-width: 1201px) and (max-width: 2000px) {
+@media screen and (min-width: 1201px) {
     h1 {
         font-size: 2.5rem;
     }

@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
 const state = {
     disable_menu: false
 }
@@ -38,31 +39,17 @@ function closeDialog() {
     document.getElementById('dialog').style.display = 'none';
 }
 
-let toggled = false;
-function toggleNav() {
-    if(!state.disable_menu) {
-        if(window.innerWidth>769){
-            const iframe = window.parent.document.querySelector('iframe');
-            const nav = iframe.contentDocument.getElementById('nav');
-            const header = document.getElementById('header');
-            // Toggle the 'show' class on the nav element to translate it down or up.
-            header.classList.toggle('show');
-            nav.classList.toggle('show');
-        } else {
-            toggleSideNav()
-        }
-    } else {
-        alert("Please close the current action to open the menu.");
-    }
-}
-
 let sideNav = false;
 function toggleSideNav() {
-    if(!sideNav) {
-        document.getElementById('side_nav').style.left = '0';
-        sideNav = true;
+    if(window.innerWidth < 993){
+        if(!sideNav) {
+            document.getElementById('side_nav').style.left = '0';
+            sideNav = true;
+        } else {
+            document.getElementById('side_nav').style.left = '-100%';
+            sideNav = false;
+        }
     } else {
-        document.getElementById('side_nav').style.left = '-100%';
-        sideNav = false;
+        window.location.href = '../index.html';
     }
 }

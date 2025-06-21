@@ -6,3 +6,35 @@ body {
 #menu_icon {
     border-radius: 0;
 }
+
+#top_nav {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+#top_nav a {
+    color: white;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    text-shadow: 2px 2px 1rem var(--background_mono);
+}
+
+#top_nav button {
+    background: var(--mono_back);
+    border-radius: .5rem;
+    width: 4rem;
+    height: 3.5rem;
+}
+
+#top_nav button svg path {
+    fill: var(--theme);
+}
+
+#top_nav a:before, #top_nav a:after {
+    background: var(--background_main);
+}
