@@ -55,6 +55,7 @@ p {
     align-items: center;
     width: 100%;
     margin: 1rem 0 5rem;
+    max-height: fit-content;
 }
 
 .sponsor_wrapper p {
@@ -73,7 +74,15 @@ p {
 }
 
 .sponsor_wrapper img {
+    width: 100%;
     max-width: 50%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+#harmony, #kinetic {
+    object-fit: contain;
+    height: 100%;
 }
 
 #packets {
