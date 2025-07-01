@@ -40,13 +40,14 @@ section h3, section h2 {
     background-size: cover;
 }
 
-#auv_hero {
-    background: url("../media/2023_gyarados_media/piplup_render_1_F.png") center;
+#auv_type_x {
+    background: url("../media/2025_type_x_media/robosub_official_2024.PNG") center 10%;
     background-size: cover;
 }
 
 #overview {
     background: none;
+    text-align: center;
 }
 
 .section_title {

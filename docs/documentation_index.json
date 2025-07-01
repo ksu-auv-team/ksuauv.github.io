@@ -1,12 +1,12 @@
 [
   {
-    "title": "2025 KSU AUV, Hope, Software Documentation",
+    "title": "2025 KSU AUV, Type X, Software Documentation",
     "author": "Ryan Slovensky",
     "date_published": "2025-06-30",
-    "documentation_url": "../docs/auv_documentation/2025_sub_hope/KSU_AUV_Software_Documentation_2025.pdf",
+    "documentation_url": "../docs/auv_documentation/2025_sub_type_x/KSU_AUV_Software_Documentation_2025.pdf",
     "photo_url": "",
     "photo_alt_description": "",
-    "summary": "The software that powers Hope, the 2025 AUV, features modular packages for movement, AI, vison, and sensors, all connected through a local flask server. Designed for both real-world and simulations, this system allows for realtime testing from a screen or the water.",
+    "summary": "The software that powers Type X, the 2025 AUV, features modular packages for movement, AI, vison, and sensors, all connected through a local flask server. Designed for both real-world and simulations, this system allows for realtime testing from a screen or the water.",
     "tags": ["auv", "download"]
   },
   {
@@ -21,11 +21,11 @@
   },
 
   {
-    "title": "2025 KSU AUV",
+    "title": "2025 AUV 'Type X' Documentation",
     "author": "Autonomous Underwater Vehicle Team at Kennesaw State University",
     "date_published": "2025-06-20",
     "documentation_url": "../html/sub_documentation/2025_sub.html",
-    "photo_url": "../media/2025_hope_media/robosub_official_2024.PNG",
+    "photo_url": "../media/2025_type_x_media/robosub_official_2024.PNG",
     "photo_alt_description": "Gyarados Frame",
     "summary": "Introducing the 2025 AUV, SUB NAME, developed and built by the KSU AUV team. This documentation being updated as the project continues to grow.",
     "tags": ["auv"]
