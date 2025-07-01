@@ -82,6 +82,7 @@ input {
     width: 55%;
     display: flex;
     flex-direction: column;
+    min-height: 80vh;
 }
 
 .discover_object {
@@ -92,4 +93,28 @@ input {
     max-height: 1.4rem;
     max-width: 1.4rem;
     border-radius: 0;
+}
+
+.documentation_spacer {
+    height: 5rem;
+    width: 90%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.documentation_spacer > * {
+    color: var(--theme);
+}
+
+.divider_decoration {
+    height: 3px;
+    width: 100%;
+    background: var(--theme);
+}
+
+.discover_hidden {
+    display: none;
 }

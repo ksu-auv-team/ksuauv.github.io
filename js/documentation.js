@@ -108,10 +108,41 @@ function clearDocumentList() {
 
 // Create HTML elements, input information from entries created in document_list() and display them
 function display_documents(documents) {
+    const docsList = document.getElementById('docs_list');
+    // Keep track of years to display dividers
+    const renderedYears = [];
     documents.forEach((entry) => {
+        // If entry has no date, then skip. They need a date
+        if (!(entry.date instanceof Date) || isNaN(entry.date)) return;
+        const year = entry.date.getFullYear().toString();
+
+        // If this year hasn't been added yet, add a year divider
+        if (!renderedYears.includes(year)) {
+            const documentation_spacer = document.createElement('div');
+            documentation_spacer.classList.add('documentation_spacer');
+            documentation_spacer.id = `year-${year}`;
+            documentation_spacer.setAttribute('data-year', year);
+
+            const divider_decoration_1 = document.createElement('span');
+            divider_decoration_1.classList.add('divider_decoration');
+            documentation_spacer.appendChild(divider_decoration_1);
+
+            const divider_title = document.createElement('h1');
+            divider_title.innerText = year;
+            documentation_spacer.appendChild(divider_title);
+
+            const divider_decoration_2 = document.createElement('span');
+            divider_decoration_2.classList.add('divider_decoration');
+            documentation_spacer.appendChild(divider_decoration_2);
+
+            docsList.appendChild(documentation_spacer);
+            renderedYears.push(year);
+        }
+
         const newDoc = document.createElement('a');
         newDoc.href = entry.documentation_link;
         newDoc.classList.add('discover_object');
+        newDoc.setAttribute('data-year', year);
 
         // Set the download attribute and give the name of the file being downloaded
         if(entry.tags.includes("download")) {
@@ -132,6 +163,7 @@ function display_documents(documents) {
             }
 
             doc_img.alt = entry.photo_alt;
+            doc_img.classList.add('discover_img_down');
         }
 
         const doc_content = document.createElement('div');
@@ -190,13 +222,13 @@ function display_documents(documents) {
 
         newDoc.appendChild(doc_content);
 
-        document.getElementById('docs_list').appendChild(newDoc);
+        docsList.appendChild(newDoc);
     })
 }
 
 // Un-filter the entries on the page
 function unFilterResults() {
-    const document_list = document.getElementsByClassName("discover_object");
+    const document_list = document.querySelectorAll(".discover_object, .documentation_spacer");
     for (const item of document_list) {
         item.classList.remove("discover_hidden");
     }
@@ -213,14 +245,35 @@ function filterResults() {
         if(input.checked) {
             filters.push(input.value);
         }
-
     }
 
-    currentOrder.forEach((obj, index) => {
-        if(!filters.every(filter => obj.tags.includes(filter))) {
-            document_list[index].classList.add("discover_hidden");
+    let docIndex = 0;
+    currentOrder.forEach((obj) => {
+        if (!(obj.date instanceof Date) || isNaN(obj.date)) return; // skip if not a doc
+
+        if (!filters.every(filter => obj.tags.includes(filter))) {
+            document_list[docIndex].classList.add("discover_hidden");
         }
-    })
+        docIndex++;
+    });
+
+
+    // Hide year dividers with no visible documents
+    const yearDividers = document.querySelectorAll('.documentation_spacer');
+    yearDividers.forEach(divider => {
+        const year = divider.dataset.year;
+        const hasVisibleDocs = Array.from(document.querySelectorAll(`.discover_object[data-year="${year}"]`))
+            .some(doc => !doc.classList.contains('discover_hidden'));
+
+        if (!hasVisibleDocs) {
+            console.log(`Year ${year} has no visible docs`);
+            divider.classList.add('discover_hidden');
+        } else {
+            console.log(`Year ${year} has visible docs`);
+            divider.classList.remove('discover_hidden');
+        }
+    });
+
     updateCount();
 }
 

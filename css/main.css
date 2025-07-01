@@ -306,6 +306,10 @@ body {
     object-fit: cover;
 }
 
+.discover_img_down {
+    object-position: center 20%;
+}
+
 .discover_content {
     padding: 1rem;
     background: var(--header);
