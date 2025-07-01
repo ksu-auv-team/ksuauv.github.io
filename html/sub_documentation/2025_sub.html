@@ -63,9 +63,131 @@
         <section class="colored_section">
             <h2>Software Design</h2>
 
-            <p>
-                Software Stuff
-            </p>
+            <p>Check out the full detailed software documentation on the Documentation page!</p>
+
+            <div class="sub_section_text">
+                <h3 class="underlined_dark colored_text">Background</h3>
+                <p>
+                    The developed code consists of several ‘packages’ which perform certain tasks.
+                    The primary packages include:
+                </p>
+
+                <ul>
+                    <li>Flash Handler</li>
+                    <li>Hardware Interface</li>
+                    <li>Movement Package</li>
+                    <li>Camera Package</li>
+                    <li>AI Package</li>
+                    <li>Virtual Hardware Interface</li>
+                </ul>
+
+                <p>
+                    The virtual variant is designed for testing within the developed Unity simulation, allowing for the Orin to pilot the sub within it. The regular Hardware Interface allows for the Orin to pilot the physical submersible within the
+                    real-world. The other packages remain that same across both real-world and
+                    simulation runs.
+                </p>
+            </div>
+
+            <div class="sub_section_text">
+                <h3 class="underlined_dark colored_text">Flash Handler</h3>
+                <p>
+                    The FlaskHandler package uses the Python Flask library to setup a web application that is hosted locally on the Orin. Other processes running on the
+                    Orin are able to access the application, as such several databases are hosted on
+                    this application for the other packages to GET and POST data, allowing for
+                    communication between the different packages.
+
+                    <br><br>
+
+                    Databases are accessed by navigating to ”http://127.0.0.1:5000/(database
+                    name)”. Attempting to navigate to a database URL within a browser will result
+                    in a blank page, as the pages aren’t made to visually display the database. The
+                    databases when accessed return a json dictionary, with the key being the column
+                    header and the value being the most recent recorded value for that column
+                    header
+                </p>
+            </div>
+
+            <div class="sub_section_text">
+                <h3 class="underlined_dark colored_text">Hardware Interface</h3>
+                <p>
+                    The Hardware Interface allows for the Orin, the brain of the sub, to communicate
+                    with the physical hardware that makes up the sub. The interface main purpose
+                    is to allow for communication with sensors and motors.
+
+                    <br><br>
+
+                    The Hardware Interface is currently divided among two different files, ’HardwareInterface.py’ and ’MPU6050.py’. ’HardwareInterface.py’ is the primary
+                    package for the hardware interface, ’MPU6050.py’ merely providing functionality for the MPU sensor on the sub.
+                </p>
+            </div>
+
+            <div class="sub_section_text">
+                <h3 class="underlined_dark colored_text">Camera Package</h3>
+                <p>
+                    The Camera package accesses two camera. One is a ZED 2i camera, which acts
+                    as the front-facing camera for the sub. The other is an Anker Power Conference
+                    C200 camera, which is used as the anchor camera to allow the sub to observe
+                    what is below it.
+
+                    <br><br>
+
+                    The feed from bother cameras is stream to the web application setup by the
+                    FlaskHandler process. The feeds themselves being accessed using ”http://127.0.0.1:5000/video 0”
+                    and ”http://127.0.0.1:5000/video 1”. ’video 0’ contains the feed from the ZED
+                    camera while ’video 1’ contains the feed from the anchor camera.
+                </p>
+            </div>
+
+            <div class="sub_section_text">
+                <h3 class="underlined_dark colored_text">Movement Package</h3>
+                <p>
+                    The Movement Package is concerned with allowing the sub to move in an intelligent way. This is done
+                    by translating inputs received either from the AI or a controller into data that when sent
+                    to the motors will produce the desired results.
+
+                    <br><br>
+
+                    The Movement Package also uses another file PID.py which provided a Proportional Integral Derivative (PID). The PID allows for the sub to more intelligently
+                    reach its destination, which we call the set-point. The issue is by default the
+                    sub cannot reach the set-point exactly due to gravity dragging the sub down
+                    and any current pushing the sub away from the set-point. As such to have the
+                    sub remain at a set-point we need to have the motors move the sub.
+                </p>
+            </div>
+
+            <div class="sub_section_text">
+                <h3 class="underlined_dark colored_text">Sonar Package</h3>
+                <p>
+                    The Sonar Package is separate from the Hardware Interface package due to
+                    concerns of unnecessary overhead of including its code in the package and its
+                    need to constantly be operating to be useful.
+
+                    <br><br>
+
+                    The sonar used for the package is the Ping360, which has an effective range
+                    of 60 meters ( 175 feet). The current (2025) AUV submersible powers the sonar
+                    using 16.8 Volts, with amperage varying from .67 to .69.
+
+
+                    <br><br>
+
+                    This code operates by sending out a signal at each angle, note that this is
+                    innately in gradians (gradian * .9 = angle) for the ping360. Using the transmitAngle(gradian) we can control the gradian at which the signal is sent out.
+                    This is done for all 400 gradians to get a 360-degree view of the surroundings.
+                    The transmitAngle(gradian) method returns a pingmessage which we can
+                    extract data from, we can then perform operations to get the signal intensity
+                    from it and the distance at which the intensity occurred.
+                </p>
+            </div>
+
+            <div class="sub_section_text">
+                <h3 class="underlined_dark colored_text">Debug Handler</h3>
+                <p>
+                    To track errors and data during runtime the Debug Handler package was created. This package is imported into the majority of packages to provide logging
+                    functionality. The DebugHandler.py file itself contains the class definition for a
+                    DebugHandler object.
+                </p>
+            </div>
         </section>
     </main>
 </body>

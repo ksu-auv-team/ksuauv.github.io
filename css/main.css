@@ -282,6 +282,10 @@ body {
     color: var(--text);
 }
 
+.colored_section li {
+    color: var(--text);
+}
+
 .discover_object {
     width: 100%;
     display: flex;
