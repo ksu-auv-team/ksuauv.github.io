@@ -166,7 +166,7 @@ body {
 
 .figure_caption {
     padding: 0;
-    margin: 0;
+    margin: 0 0 2rem 0;
     text-align: center;
     color: var(--background_mono);
 }

@@ -168,9 +168,161 @@
         <section>
             <h2>Electrical Design</h2>
 
-            <p class="text_inverted">
-                Electrical Stuff
-            </p>
+            <div class="sub_section_text">
+                <h3 class="underlined_light">Electrical Changes</h3>
+                <p class="text_inverted">
+                    Originally, each module was contained in its own subsystem. This proved to cause issues
+                    with wiring, space, and ease-of-use. This year, the KSU AUV team has made efforts to
+                    centralize all of the systems modules into one large system. This change demanded that the
+                    system overall be redesigned to be modular.
+
+                    <br><br>
+
+                    To achieve this goal, the team has specified standards for boards that contain
+                    subsystems. Each of these subsystems will be able to attach to a larger system board called
+                    the motherboard. This motherboard will allow each submodule to easily be added or removed
+                    from the system for ease-of-use. It also hosts the power and signal lines for the submodules
+                    to integrate seamlessly.
+                </p>
+
+                <div class="row">
+                    <div class="row_content">
+                        <h3 class="underlined_light">Motherboard</h3>
+                        <p class="text_inverted">
+                            The main purpose of the motherboard is to serve as a hub for submodules to easily
+                            integrate with the Orin. This means that both power and signal lines will be hosted on
+                            the board. There are 4 power regulators for 3.3 V, 5 V, 12 V, and 20 V. The first 3 are for
+                            the submodules with the latter being for the Orin. As for signals, multiple PCIe connectors
+                            can be populated. Multiple signal buses run through the connectors to allow for easy
+                            communications.
+
+                            <br><br>
+
+                            Since this board hosts power, there is also some safety built into it. This will ensure
+                            that a level of safety is implemented in each system. The motherboard sits between the Kill
+                            Switch board and the Orin. Submodules are contained within the motherboard. A 3d render of
+                            the motherboard can be seen in <i>Figure 1</i>.
+                        </p>
+                    </div>
+
+                    <div class="row_figure">
+                        <img class="half_width" src="../../media/2025_type_x_media/pcb_motherboard_3d.png"
+                             alt="Motherboard Render">
+                        <i class="figure_caption">Figure 1: Motherboard Render</i>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row_figure">
+                        <img class="half_width" src="../../media/2025_type_x_media/pcb_i2c_interface_3d.png"
+                             alt="I2C Interface Render">
+                        <i class="figure_caption">Figure 2: I2C Interface Render</i>
+                    </div>
+
+                    <div class="row_content">
+                        <h3 class="underlined_light">I2C Interface Render</h3>
+                        <p class="text_inverted">
+                            The Orin exposes a number of header pins which are available to be used for various
+                            purposes such as GPIO, I2C, SPI, and CAN. The I2C interface is used to provide a signal
+                            connection between the Orin and the motherboard. This board sits between the motherboard
+                            and the Orin, but is considered part of the Orin as it is connected directly to the header
+                            pins located on the Orin.
+
+                            <br><br>
+
+                            This is one of the few boards that are not connected to the Motherboard directly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row_content">
+                        <h3 class="underlined_light">ESC Controller</h3>
+                        <p class="text_inverted">
+                            The ESC Controller is a board that provides the Orin with the ability to control the
+                            onboard motors. The controller is not connected directly to the motherboard. Instead,
+                            this board connects to an the ESC Adapter which is connected to the motherboard.
+
+                            <br><br>
+
+                            The controller is located nears the ESCs, hence why it is not on the motherboard. To
+                            be supplied with power and data, it interacts with the ESC Adapter. Thus, this
+                            board is located between the ESC Adapter and the ESCs.
+                        </p>
+                    </div>
+
+                    <div class="row_figure">
+                        <img class="half_width" src="../../media/2025_type_x_media/pcb_esc_controller_3d.png"
+                             alt="ESC Controller Render">
+                        <i class="figure_caption">Figure 3: ESC Controller Render</i>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row_figure">
+                        <img class="half_width" src="../../media/2025_type_x_media/pcb_esc_adapter_3d.png"
+                             alt="ESC Adapter Render">
+                        <i class="figure_caption">Figure 4: ESC Adapter Render</i>
+                    </div>
+
+                    <div class="row_content">
+                        <h3 class="underlined_light">ESC Adapter Render</h3>
+                        <p class="text_inverted">
+                            The ESC Adapter is the connection between the motherboard and the ESC Adapter. This board
+                            slots into one of the PCIe slots on the motherboard and only connects to the ESC
+                            controller to provide power and data.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row_content">
+                        <h3 class="underlined_light">Environmental Module</h3>
+                        <p class="text_inverted">
+                            The Environmental Module provides the Orin with realtime data detected from within the vehicle.
+                            It is able to provide information from an onboard IMU for acceleration, angular velocity,
+                            and orientation. This helps the software team to train their algorithms and react
+                            to sudden changes.
+
+                            <br><br>
+
+                            The Environmental Module connects directly to the motherboard. Thus, it recieves
+                            power and communicates with the Orin via the Motherboard.
+                        </p>
+                    </div>
+
+                    <div class="row_figure">
+                        <img class="half_width" src="../../media/2025_type_x_media/pcb_imu_3d.png"
+                             alt="Environmental Module Render">
+                        <i class="figure_caption">Figure 5: Environmental Module Render</i>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row_figure">
+                        <img class="half_width" src="../../media/2025_type_x_media/pcb_battery_monitor_3d.png"
+                             alt="Batter Monitor Render">
+                        <i class="figure_caption">Figure 6: Batter Monitor Render</i>
+                    </div>
+
+                    <div class="row_content">
+                        <h3 class="underlined_light">Battery Monitor Render</h3>
+                        <p class="text_inverted">
+                            To capture data over the battery state, a battery monitor is placed near them.
+                            This provides the team with better information related to the batteries. The batteries are
+                            encased in a sealed metal box which makes it challenging to observe the state. The
+                            battery monitor is the solution.
+
+                            <br><br>
+
+                            The battery monitor is not connected to the motherboard. Instead, it is connected to the
+                            batteries and another board hosting a screen which will display the battery state.
+                        </p>
+                    </div>
+                </div>
+
+<!--                TODO: Add 6 to Rest in ThO-->
+            </div>
         </section>
 
         <section class="colored_section">
