@@ -440,6 +440,10 @@ body {
     padding-bottom: 1rem;
 }
 
+.half_width {
+    width: 50%;
+}
+
 .member_social {
     transition: 400ms;
 }

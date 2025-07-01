@@ -108,6 +108,10 @@ section h3, section h2 {
     width: 100%;
 }
 
+#auv_type_x_front {
+    width: 50%;
+}
+
 .image_row {
     display: flex;
     flex-wrap: wrap;
