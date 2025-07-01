@@ -50,6 +50,58 @@ section h3, section h2 {
     text-align: center;
 }
 
+#documentation_card {
+    width: 100%;
+}
+
+.documentation_card {
+    width: 100%;
+    background: var(--background_mono_dark);
+    border-radius: 1rem;
+    flex-grow: 1;
+    padding: .5rem 1rem;
+    border: 2px solid var(--background_mono);
+    box-shadow: var(--background_mono) 2px 3px 5px;
+}
+
+.documentation_card label {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text_inverted);
+}
+
+.documentation_card p {
+    color: var(--background_main);
+}
+
+.documentation_card > p {
+    margin: 5px;
+    padding: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--theme);
+}
+
+.documentation_card > * {
+    color: var(--background_main);
+}
+
+
+.documentation_card_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.documentation_card_details * {
+    margin: 0;
+    padding: 0;
+}
+
 .section_title {
     font-weight: bolder;
     padding: 0;

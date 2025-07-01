@@ -444,6 +444,10 @@ body {
     width: 50%;
 }
 
+.three_four_width {
+    width: 75%;
+}
+
 .member_social {
     transition: 400ms;
 }
